@@ -1,0 +1,803 @@
+swift_ride_flutter/
+├── pubspec.yaml
+├── pubspec.lock
+├── analysis_options.yaml
+├── README.md
+├── .gitignore
+├── .metadata
+├── android/
+│   ├── app/
+│   │   ├── src/
+│   │   │   ├── main/
+│   │   │   │   ├── AndroidManifest.xml
+│   │   │   │   ├── kotlin/
+│   │   │   │   └── res/
+│   │   │   ├── debug/
+│   │   │   └── profile/
+│   │   ├── build.gradle
+│   │   └── proguard-rules.pro
+│   ├── gradle/
+│   ├── build.gradle
+│   ├── gradle.properties
+│   └── settings.gradle
+├── ios/
+│   ├── Runner/
+│   │   ├── Info.plist
+│   │   ├── AppDelegate.swift
+│   │   └── Runner-Bridging-Header.h
+│   ├── Runner.xcodeproj/
+│   ├── Runner.xcworkspace/
+│   └── Podfile
+├── web/
+│   ├── index.html
+│   ├── manifest.json
+│   └── favicon.png
+├── lib/
+│   ├── main.dart
+│   ├── app.dart
+│   ├── bootstrap.dart
+│   ├── core/
+│   │   ├── constants/
+│   │   │   ├── app_constants.dart
+│   │   │   ├── api_endpoints.dart
+│   │   │   ├── app_colors.dart
+│   │   │   ├── app_strings.dart
+│   │   │   ├── app_dimensions.dart
+│   │   │   ├── app_assets.dart
+│   │   │   ├── app_routes.dart
+│   │   │   ├── app_themes.dart
+│   │   │   └── storage_keys.dart
+│   │   ├── config/
+│   │   │   ├── app_config.dart
+│   │   │   ├── route_config.dart
+│   │   │   ├── theme_config.dart
+│   │   │   ├── env_config.dart
+│   │   │   ├── flavor_config.dart
+│   │   │   └── dependency_config.dart
+│   │   ├── network/
+│   │   │   ├── api_client.dart
+│   │   │   ├── dio_client.dart
+│   │   │   ├── network_info.dart
+│   │   │   ├── api_response.dart
+│   │   │   ├── api_exception.dart
+│   │   │   ├── websocket_client.dart
+│   │   │   └── interceptors/
+│   │   │       ├── auth_interceptor.dart
+│   │   │       ├── logging_interceptor.dart
+│   │   │       ├── retry_interceptor.dart
+│   │   │       ├── cache_interceptor.dart
+│   │   │       └── error_interceptor.dart
+│   │   ├── services/
+│   │   │   ├── location_service.dart
+│   │   │   ├── notification_service.dart
+│   │   │   ├── storage_service.dart
+│   │   │   ├── audio_service.dart
+│   │   │   ├── speech_service.dart
+│   │   │   ├── websocket_service.dart
+│   │   │   ├── camera_service.dart
+│   │   │   ├── biometric_service.dart
+│   │   │   ├── maps_service.dart
+│   │   │   ├── analytics_service.dart
+│   │   │   ├── file_service.dart
+│   │   │   ├── permission_service.dart
+│   │   │   └── background_service.dart
+│   │   ├── utils/
+│   │   │   ├── app_utils.dart
+│   │   │   ├── validators.dart
+│   │   │   ├── formatters.dart
+│   │   │   ├── extensions.dart
+│   │   │   ├── logger.dart
+│   │   │   ├── date_utils.dart
+│   │   │   ├── currency_utils.dart
+│   │   │   ├── permission_utils.dart
+│   │   │   ├── image_utils.dart
+│   │   │   ├── encryption_utils.dart
+│   │   │   └── debouncer.dart
+│   │   ├── errors/
+│   │   │   ├── exceptions.dart
+│   │   │   ├── failures.dart
+│   │   │   ├── error_handler.dart
+│   │   │   └── error_messages.dart
+│   │   ├── database/
+│   │   │   ├── app_database.dart
+│   │   │   ├── entities/
+│   │   │   │   ├── user_entity.dart
+│   │   │   │   ├── ride_entity.dart
+│   │   │   │   ├── chat_entity.dart
+│   │   │   │   └── location_entity.dart
+│   │   │   ├── daos/
+│   │   │   │   ├── user_dao.dart
+│   │   │   │   ├── ride_dao.dart
+│   │   │   │   ├── chat_dao.dart
+│   │   │   │   └── location_dao.dart
+│   │   │   └── migrations/
+│   │   │       ├── migration_1_to_2.dart
+│   │   │       └── migration_2_to_3.dart
+│   │   └── dependency_injection/
+│   │       ├── injection_container.dart
+│   │       ├── service_locator.dart
+│   │       └── modules/
+│   │           ├── network_module.dart
+│   │           ├── storage_module.dart
+│   │           ├── service_module.dart
+│   │           └── repository_module.dart
+│   ├── features/
+│   │   ├── authentication/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── auth_local_datasource.dart
+│   │   │   │   │   └── auth_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── user_model.dart
+│   │   │   │   │   ├── otp_model.dart
+│   │   │   │   │   ├── auth_response_model.dart
+│   │   │   │   │   └── token_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── auth_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── user.dart
+│   │   │   │   │   ├── auth_response.dart
+│   │   │   │   │   └── token.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── auth_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── login_with_otp.dart
+│   │   │   │       ├── verify_otp.dart
+│   │   │   │       ├── logout.dart
+│   │   │   │       ├── refresh_token.dart
+│   │   │   │       ├── biometric_login.dart
+│   │   │   │       ├── register_user.dart
+│   │   │   │       └── reset_password.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── auth_bloc.dart
+│   │   │       │   ├── auth_event.dart
+│   │   │       │   ├── auth_state.dart
+│   │   │       │   ├── otp_bloc.dart
+│   │   │       │   ├── otp_event.dart
+│   │   │       │   └── otp_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── splash_page.dart
+│   │   │       │   ├── onboarding_page.dart
+│   │   │       │   ├── login_page.dart
+│   │   │       │   ├── otp_verification_page.dart
+│   │   │       │   ├── profile_setup_page.dart
+│   │   │       │   ├── role_selection_page.dart
+│   │   │       │   └── forgot_password_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── otp_input_field.dart
+│   │   │           ├── phone_input_field.dart
+│   │   │           ├── biometric_button.dart
+│   │   │           ├── social_login_buttons.dart
+│   │   │           ├── country_picker.dart
+│   │   │           └── auth_form_wrapper.dart
+│   │   ├── home/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── home_local_datasource.dart
+│   │   │   │   │   └── home_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── dashboard_model.dart
+│   │   │   │   │   ├── nearby_driver_model.dart
+│   │   │   │   │   └── quick_destination_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── home_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── dashboard.dart
+│   │   │   │   │   ├── nearby_driver.dart
+│   │   │   │   │   └── quick_destination.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── home_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── get_dashboard_data.dart
+│   │   │   │       ├── get_nearby_drivers.dart
+│   │   │   │       ├── update_location.dart
+│   │   │   │       └── toggle_driver_status.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── home_bloc.dart
+│   │   │       │   ├── home_event.dart
+│   │   │       │   ├── home_state.dart
+│   │   │       │   ├── location_bloc.dart
+│   │   │       │   ├── location_event.dart
+│   │   │       │   ├── location_state.dart
+│   │   │       │   ├── driver_status_bloc.dart
+│   │   │       │   ├── driver_status_event.dart
+│   │   │       │   └── driver_status_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── rider_home_page.dart
+│   │   │       │   ├── driver_home_page.dart
+│   │   │       │   ├── main_navigation_page.dart
+│   │   │       │   └── dashboard_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── map_widget.dart
+│   │   │           ├── ride_request_bottom_sheet.dart
+│   │   │           ├── driver_status_widget.dart
+│   │   │           ├── nearby_drivers_widget.dart
+│   │   │           ├── quick_destinations_widget.dart
+│   │   │           ├── voice_command_button.dart
+│   │   │           ├── search_destination_widget.dart
+│   │   │           ├── current_location_button.dart
+│   │   │           └── earnings_widget.dart
+│   │   ├── rides/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── rides_local_datasource.dart
+│   │   │   │   │   └── rides_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── ride_model.dart
+│   │   │   │   │   ├── bargain_offer_model.dart
+│   │   │   │   │   ├── ride_request_model.dart
+│   │   │   │   │   ├── trip_model.dart
+│   │   │   │   │   └── fare_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── rides_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── ride.dart
+│   │   │   │   │   ├── bargain_offer.dart
+│   │   │   │   │   ├── trip.dart
+│   │   │   │   │   └── fare.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── rides_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── request_ride.dart
+│   │   │   │       ├── make_bargain_offer.dart
+│   │   │   │       ├── accept_ride.dart
+│   │   │   │       ├── cancel_ride.dart
+│   │   │   │       ├── start_trip.dart
+│   │   │   │       ├── complete_trip.dart
+│   │   │   │       ├── track_ride.dart
+│   │   │   │       └── calculate_fare.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── ride_request_bloc.dart
+│   │   │       │   ├── ride_request_event.dart
+│   │   │       │   ├── ride_request_state.dart
+│   │   │       │   ├── bargaining_bloc.dart
+│   │   │       │   ├── bargaining_event.dart
+│   │   │       │   ├── bargaining_state.dart
+│   │   │       │   ├── trip_progress_bloc.dart
+│   │   │       │   ├── trip_progress_event.dart
+│   │   │       │   ├── trip_progress_state.dart
+│   │   │       │   ├── ride_history_bloc.dart
+│   │   │       │   ├── ride_history_event.dart
+│   │   │       │   └── ride_history_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── ride_request_page.dart
+│   │   │       │   ├── bargaining_page.dart
+│   │   │       │   ├── trip_progress_page.dart
+│   │   │       │   ├── trip_complete_page.dart
+│   │   │       │   ├── ride_history_page.dart
+│   │   │       │   ├── scheduled_rides_page.dart
+│   │   │       │   └── ride_details_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── bargain_offer_card.dart
+│   │   │           ├── price_input_widget.dart
+│   │   │           ├── trip_progress_tracker.dart
+│   │   │           ├── driver_info_card.dart
+│   │   │           ├── route_preview_widget.dart
+│   │   │           ├── fare_breakdown_widget.dart
+│   │   │           ├── ride_status_widget.dart
+│   │   │           ├── eta_widget.dart
+│   │   │           └── ride_actions_widget.dart
+│   │   ├── chat/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── chat_local_datasource.dart
+│   │   │   │   │   └── chat_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── message_model.dart
+│   │   │   │   │   ├── chat_room_model.dart
+│   │   │   │   │   ├── voice_note_model.dart
+│   │   │   │   │   └── file_attachment_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── chat_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── message.dart
+│   │   │   │   │   ├── chat_room.dart
+│   │   │   │   │   ├── voice_note.dart
+│   │   │   │   │   └── file_attachment.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── chat_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── send_message.dart
+│   │   │   │       ├── get_messages.dart
+│   │   │   │       ├── send_voice_note.dart
+│   │   │   │       ├── send_file.dart
+│   │   │   │       └── mark_as_read.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── chat_bloc.dart
+│   │   │       │   ├── chat_event.dart
+│   │   │       │   ├── chat_state.dart
+│   │   │       │   ├── voice_note_bloc.dart
+│   │   │       │   ├── voice_note_event.dart
+│   │   │       │   └── voice_note_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── chat_page.dart
+│   │   │       │   ├── chat_list_page.dart
+│   │   │       │   └── voice_note_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── message_bubble.dart
+│   │   │           ├── voice_note_widget.dart
+│   │   │           ├── chat_input_field.dart
+│   │   │           ├── typing_indicator.dart
+│   │   │           ├── file_attachment_widget.dart
+│   │   │           ├── voice_recorder_widget.dart
+│   │   │           ├── chat_app_bar.dart
+│   │   │           └── message_status_widget.dart
+│   │   ├── emergency/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── emergency_local_datasource.dart
+│   │   │   │   │   └── emergency_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── emergency_report_model.dart
+│   │   │   │   │   ├── emergency_contact_model.dart
+│   │   │   │   │   └── sos_alert_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── emergency_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── emergency_report.dart
+│   │   │   │   │   ├── emergency_contact.dart
+│   │   │   │   │   └── sos_alert.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── emergency_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── trigger_emergency.dart
+│   │   │   │       ├── add_emergency_contact.dart
+│   │   │   │       ├── send_sos_alert.dart
+│   │   │   │       └── get_emergency_contacts.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── emergency_bloc.dart
+│   │   │       │   ├── emergency_event.dart
+│   │   │       │   └── emergency_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── emergency_page.dart
+│   │   │       │   ├── emergency_contacts_page.dart
+│   │   │       │   └── sos_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── panic_slide_button.dart
+│   │   │           ├── emergency_contacts_widget.dart
+│   │   │           ├── sos_countdown_widget.dart
+│   │   │           ├── emergency_info_widget.dart
+│   │   │           └── emergency_call_widget.dart
+│   │   ├── profile/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── profile_local_datasource.dart
+│   │   │   │   │   └── profile_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── profile_model.dart
+│   │   │   │   │   ├── driver_profile_model.dart
+│   │   │   │   │   ├── vehicle_model.dart
+│   │   │   │   │   └── document_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── profile_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── profile.dart
+│   │   │   │   │   ├── driver_profile.dart
+│   │   │   │   │   ├── vehicle.dart
+│   │   │   │   │   └── document.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── profile_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── get_profile.dart
+│   │   │   │       ├── update_profile.dart
+│   │   │   │       ├── upload_document.dart
+│   │   │   │       ├── add_vehicle.dart
+│   │   │   │       └── verify_driver.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── profile_bloc.dart
+│   │   │       │   ├── profile_event.dart
+│   │   │       │   ├── profile_state.dart
+│   │   │       │   ├── settings_bloc.dart
+│   │   │       │   ├── settings_event.dart
+│   │   │       │   └── settings_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── profile_page.dart
+│   │   │       │   ├── edit_profile_page.dart
+│   │   │       │   ├── settings_page.dart
+│   │   │       │   ├── preferred_drivers_page.dart
+│   │   │       │   ├── payment_methods_page.dart
+│   │   │       │   ├── driver_documents_page.dart
+│   │   │       │   └── vehicle_management_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── profile_avatar_widget.dart
+│   │   │           ├── settings_tile_widget.dart
+│   │   │           ├── document_upload_widget.dart
+│   │   │           ├── verification_status_widget.dart
+│   │   │           ├── vehicle_card_widget.dart
+│   │   │           └── preferred_driver_card.dart
+│   │   ├── reviews/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── review_local_datasource.dart
+│   │   │   │   │   └── review_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── review_model.dart
+│   │   │   │   │   ├── rating_model.dart
+│   │   │   │   │   └── voice_review_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── review_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── review.dart
+│   │   │   │   │   ├── rating.dart
+│   │   │   │   │   └── voice_review.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── review_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── submit_review.dart
+│   │   │   │       ├── get_reviews.dart
+│   │   │   │       ├── record_voice_review.dart
+│   │   │   │       └── update_review.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── review_bloc.dart
+│   │   │       │   ├── review_event.dart
+│   │   │       │   └── review_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── review_page.dart
+│   │   │       │   ├── reviews_list_page.dart
+│   │   │       │   └── voice_review_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── rating_widget.dart
+│   │   │           ├── voice_review_recorder.dart
+│   │   │           ├── review_card_widget.dart
+│   │   │           ├── review_summary_widget.dart
+│   │   │           └── review_form_widget.dart
+│   │   ├── payments/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── payment_local_datasource.dart
+│   │   │   │   │   └── payment_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── payment_model.dart
+│   │   │   │   │   ├── payment_method_model.dart
+│   │   │   │   │   ├── transaction_model.dart
+│   │   │   │   │   └── wallet_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── payment_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── payment.dart
+│   │   │   │   │   ├── payment_method.dart
+│   │   │   │   │   ├── transaction.dart
+│   │   │   │   │   └── wallet.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── payment_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── process_payment.dart
+│   │   │   │       ├── add_payment_method.dart
+│   │   │   │       ├── get_transaction_history.dart
+│   │   │   │       ├── top_up_wallet.dart
+│   │   │   │       └── request_refund.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── payment_bloc.dart
+│   │   │       │   ├── payment_event.dart
+│   │   │       │   ├── payment_state.dart
+│   │   │       │   ├── wallet_bloc.dart
+│   │   │       │   ├── wallet_event.dart
+│   │   │       │   └── wallet_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── payment_page.dart
+│   │   │       │   ├── wallet_page.dart
+│   │   │       │   ├── transaction_history_page.dart
+│   │   │       │   ├── add_payment_method_page.dart
+│   │   │       │   └── payment_success_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── payment_method_card.dart
+│   │   │           ├── transaction_tile.dart
+│   │   │           ├── wallet_balance_widget.dart
+│   │   │           ├── payment_form_widget.dart
+│   │   │           └── payment_status_widget.dart
+│   │   ├── promotions/
+│   │   │   ├── data/
+│   │   │   │   ├── datasources/
+│   │   │   │   │   ├── promo_local_datasource.dart
+│   │   │   │   │   └── promo_remote_datasource.dart
+│   │   │   │   ├── models/
+│   │   │   │   │   ├── promo_model.dart
+│   │   │   │   │   ├── coupon_model.dart
+│   │   │   │   │   └── referral_model.dart
+│   │   │   │   └── repositories/
+│   │   │   │       └── promo_repository_impl.dart
+│   │   │   ├── domain/
+│   │   │   │   ├── entities/
+│   │   │   │   │   ├── promo.dart
+│   │   │   │   │   ├── coupon.dart
+│   │   │   │   │   └── referral.dart
+│   │   │   │   ├── repositories/
+│   │   │   │   │   └── promo_repository.dart
+│   │   │   │   └── usecases/
+│   │   │   │       ├── apply_promo_code.dart
+│   │   │   │       ├── get_available_promos.dart
+│   │   │   │       ├── refer_friend.dart
+│   │   │   │       └── claim_referral_bonus.dart
+│   │   │   └── presentation/
+│   │   │       ├── bloc/
+│   │   │       │   ├── promo_bloc.dart
+│   │   │       │   ├── promo_event.dart
+│   │   │       │   └── promo_state.dart
+│   │   │       ├── pages/
+│   │   │       │   ├── promotions_page.dart
+│   │   │       │   ├── referral_page.dart
+│   │   │       │   └── promo_details_page.dart
+│   │   │       └── widgets/
+│   │   │           ├── promo_card_widget.dart
+│   │   │           ├── referral_code_widget.dart
+│   │   │           └── promo_banner_widget.dart
+│   │   └── ai_features/
+│   │       ├── data/
+│   │       │   ├── datasources/
+│   │       │   │   ├── ai_local_datasource.dart
+│   │       │   │   └── ai_remote_datasource.dart
+│   │       │   ├── models/
+│   │       │   │   ├── voice_command_model.dart
+│   │       │   │   ├── smart_suggestion_model.dart
+│   │       │   │   └── ai_preference_model.dart
+│   │       │   └── repositories/
+│   │       │       └── ai_repository_impl.dart
+│   │       ├── domain/
+│   │       │   ├── entities/
+│   │       │   │   ├── voice_command.dart
+│   │       │   │   ├── smart_suggestion.dart
+│   │       │   │   └── ai_preference.dart
+│   │       │   ├── repositories/
+│   │       │   │   └── ai_repository.dart
+│   │       │   └── usecases/
+│   │       │       ├── process_voice_command.dart
+│   │       │       ├── get_smart_suggestions.dart
+│   │       │       ├── update_ai_preferences.dart
+│   │       │       └── get_fare_prediction.dart
+│   │       └── presentation/
+│   │           ├── bloc/
+│   │           │   ├── voice_command_bloc.dart
+│   │           │   ├── voice_command_event.dart
+│   │           │   ├── voice_command_state.dart
+│   │           │   ├── smart_suggestions_bloc.dart
+│   │           │   ├── smart_suggestions_event.dart
+│   │           │   └── smart_suggestions_state.dart
+│   │           ├── pages/
+│   │           │   ├── voice_assistant_page.dart
+│   │           │   └── ai_preferences_page.dart
+│   │           └── widgets/
+│   │               ├── voice_command_widget.dart
+│   │               ├── smart_suggestion_card.dart
+│   │               ├── ai_chat_widget.dart
+│   │               └── voice_visualizer_widget.dart
+│   ├── shared/
+│   │   ├── widgets/
+│   │   │   ├── buttons/
+│   │   │   │   ├── custom_button.dart
+│   │   │   │   ├── floating_action_button.dart
+│   │   │   │   ├── icon_button.dart
+│   │   │   │   ├── gradient_button.dart
+│   │   │   │   └── loading_button.dart
+│   │   │   ├── inputs/
+│   │   │   │   ├── custom_text_field.dart
+│   │   │   │   ├── search_field.dart
+│   │   │   │   ├── dropdown_field.dart
+│   │   │   │   ├── date_picker_field.dart
+│   │   │   │   └── currency_input_field.dart
+│   │   │   ├── indicators/
+│   │   │   │   ├── loading_indicator.dart
+│   │   │   │   ├── progress_indicator.dart
+│   │   │   │   ├── status_indicator.dart
+│   │   │   │   └── network_indicator.dart
+│   │   │   ├── cards/
+│   │   │   │   ├── info_card.dart
+│   │   │   │   ├── action_card.dart
+│   │   │   │   ├── user_card.dart
+│   │   │   │   └── stats_card.dart
+│   │   │   ├── dialogs/
+│   │   │   │   ├── confirmation_dialog.dart
+│   │   │   │   ├── info_dialog.dart
+│   │   │   │   ├── loading_dialog.dart
+│   │   │   │   └── error_dialog.dart
+│   │   │   ├── navigation/
+│   │   │   │   ├── bottom_navigation.dart
+│   │   │   │   ├── app_drawer.dart
+│   │   │   │   ├── tab_bar.dart
+│   │   │   │   └── custom_app_bar.dart
+│   │   │   ├── overlays/
+│   │   │   │   ├── loading_overlay.dart
+│   │   │   │   ├── error_overlay.dart
+│   │   │   │   └── success_overlay.dart
+│   │   │   ├── language_selector.dart
+│   │   │   ├── error_widget.dart
+│   │   │   ├── empty_state_widget.dart
+│   │   │   ├── network_image_widget.dart
+│   │   │   ├── animated_widgets.dart
+│   │   │   ├── custom_snackbar.dart
+│   │   │   ├── shimmer_widget.dart
+│   │   │   └── refresh_widget.dart
+│   │   ├── models/
+│   │   │   ├── base_model.dart
+│   │   │   ├── api_response.dart
+│   │   │   ├── pagination_model.dart
+│   │   │   └── error_model.dart
+│   │   ├── providers/
+│   │   │   ├── language_provider.dart
+│   │   │   ├── theme_provider.dart
+│   │   │   ├── location_provider.dart
+│   │   │   ├── connectivity_provider.dart
+│   │   │   └── user_provider.dart
+│   │   ├── mixins/
+│   │   │   ├── validation_mixin.dart
+│   │   │   ├── loading_mixin.dart
+│   │   │   ├── error_handling_mixin.dart
+│   │   │   └── navigation_mixin.dart
+│   │   └── extensions/
+│   │       ├── string_extensions.dart
+│   │       ├── datetime_extensions.dart
+│   │       ├── context_extensions.dart
+│   │       └── widget_extensions.dart
+│   ├── l10n/
+│   │   ├── app_localizations.dart
+│   │   ├── app_en.arb
+│   │   ├── app_yo.arb  # Yoruba
+│   │   ├── app_ha.arb  # Hausa
+│   │   └── app_ig.arb  # Igbo
+│   └── gen/
+│       ├── assets.gen.dart
+│       └── colors.gen.dart
+├── assets/
+│   ├── images/
+│   │   ├── logos/
+│   │   │   ├── app_logo.png
+│   │   │   ├── app_logo_dark.png
+│   │   │   └── splash_logo.png
+│   │   ├── onboarding/
+│   │   │   ├── onboarding_1.png
+│   │   │   ├── onboarding_2.png
+│   │   │   └── onboarding_3.png
+│   │   ├── illustrations/
+│   │   │   ├── empty_rides.svg
+│   │   │   ├── no_internet.svg
+│   │   │   ├── location_permission.svg
+│   │   │   └── emergency_illustration.svg
+│   │   ├── placeholders/
+│   │   │   ├── user_placeholder.png
+│   │   │   ├── vehicle_placeholder.png
+│   │   │   └── map_placeholder.png
+│   │   └── backgrounds/
+│   │       ├── splash_bg.png
+│   │       └── auth_bg.png
+│   ├── icons/
+│   │   ├── navigation/
+│   │   │   ├── home.svg
+│   │   │   ├── rides.svg
+│   │   │   ├── chat.svg
+│   │   │   ├── profile.svg
+│   │   │   └── emergency.svg
+│   │   ├── actions/
+│   │   │   ├── call.svg
+│   │   │   ├── message.svg
+│   │   │   ├── location.svg
+│   │   │   ├── camera.svg
+│   │   │   └── microphone.svg
+│   │   ├── status/
+│   │   │   ├── online.svg
+│   │   │   ├── offline.svg
+│   │   │   ├── busy.svg
+│   │   │   └── verified.svg
+│   │   └── vehicles/
+│   │       ├── car.svg
+│   │       ├── motorcycle.svg
+│   │       ├── tricycle.svg
+│   │       └── bus.svg
+│   ├── fonts/
+│   │   ├── inter/
+│   │   │   ├── Inter-Regular.ttf
+│   │   │   ├── Inter-Medium.ttf
+│   │   │   ├── Inter-SemiBold.ttf
+│   │   │   └── Inter-Bold.ttf
+│   │   └── custom/
+│   │       └── CustomFont-Regular.ttf
+│   ├── lottie/
+│   │   ├── loading/
+│   │   │   ├── loading_spinner.json
+│   │   │   └── car_loading.json
+│   │   ├── success/
+│   │   │   ├── success_checkmark.json
+│   │   │   └── ride_complete.json
+│   │   ├── error/
+│   │   │   ├── error_animation.json
+│   │   │   └── no_connection.json
+│   │   └── onboarding/
+│   │       ├── welcome_animation.json
+│   │       └── feature_showcase.json
+│   └── audio/
+│       ├── notifications/
+│   │   │   ├── ride_request.mp3
+│   │   │   ├── message_received.mp3
+│   │   │   ├── payment_success.mp3
+│   │   │   └── emergency_alert.mp3
+│       └── feedback/
+│           ├── button_tap.mp3
+│           ├── success_sound.mp3
+│           └── error_sound.mp3
+├── test/
+│   ├── unit/
+│   │   ├── core/
+│   │   │   ├── services/
+│   │   │   ├── utils/
+│   │   │   └── network/
+│   │   ├── features/
+│   │   │   ├── authentication/
+│   │   │   ├── home/
+│   │   │   ├── rides/
+│   │   │   ├── chat/
+│   │   │   ├── emergency/
+│   │   │   ├── profile/
+│   │   │   ├── reviews/
+│   │   │   ├── payments/
+│   │   │   ├── promotions/
+│   │   │   └── ai_features/
+│   │   └── shared/
+│   │       ├── widgets/
+│   │       ├── models/
+│   │       └── providers/
+│   ├── widget/
+│   │   ├── features/
+│   │   │   ├── authentication/
+│   │   │   ├── home/
+│   │   │   ├── rides/
+│   │   │   ├── chat/
+│   │   │   ├── emergency/
+│   │   │   ├── profile/
+│   │   │   ├── reviews/
+│   │   │   ├── payments/
+│   │   │   ├── promotions/
+│   │   │   └── ai_features/
+│   │   └── shared/
+│   │       └── widgets/
+│   ├── integration/
+│   │   ├── app_test.dart
+│   │   ├── authentication_flow_test.dart
+│   │   ├── ride_booking_flow_test.dart
+│   │   ├── payment_flow_test.dart
+│   │   └── emergency_flow_test.dart
+│   ├── fixtures/
+│   │   ├── user_fixtures.dart
+│   │   ├── ride_fixtures.dart
+│   │   ├── payment_fixtures.dart
+│   │   └── api_response_fixtures.dart
+│   ├── helpers/
+│   │   ├── test_helpers.dart
+│   │   ├── mock_helpers.dart
+│   │   ├── widget_test_helpers.dart
+│   │   └── integration_test_helpers.dart
+│   └── mocks/
+│       ├── mock_repositories.dart
+│       ├── mock_services.dart
+│       ├── mock_datasources.dart
+│       └── mock_clients.dart
+├── integration_test/
+│   ├── app_test.dart
+│   ├── flows/
+│   │   ├── authentication_flow_test.dart
+│   │   ├── ride_booking_flow_test.dart
+│   │   ├── bargaining_flow_test.dart
+│   │   ├── chat_flow_test.dart
+│   │   ├── payment_flow_test.dart
+│   │   └── emergency_flow_test.dart
+│   └── performance/
+│       ├── app_performance_test.dart
+│       └── memory_test.dart
+└── tools/
+    ├── build_runner.dart
+    ├── code_generation.dart
+    ├── asset_generator.dart
+    └── localization_generator.dart

@@ -1,0 +1,3 @@
+"""
+Rides app initialization.
+"""

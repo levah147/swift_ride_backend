@@ -1,0 +1,34 @@
+swift_ride_project/
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── .gitignore
+├── docker-compose.yml
+├── .env.example
+├── docs/
+│   ├── api/
+│   │   ├── authentication.md
+│   │   ├── rides.md
+│   │   ├── payments.md
+│   │   └── websockets.md
+│   ├── deployment/
+│   │   ├── production.md
+│   │   ├── staging.md
+│   │   └── docker.md
+│   ├── development/
+│   │   ├── setup.md
+│   │   ├── testing.md
+│   │   └── contributing.md
+│   └── user_guide/
+│       ├── rider_guide.md
+│       ├── driver_guide.md
+│       └── admin_guide.md
+├── scripts/
+│   ├── setup_project.sh
+│   ├── deploy.sh
+│   ├── backup.sh
+│   └── test_all.sh
+└── apps/
+    ├── swift_ride_backend/
+    ├── swift_ride_flutter/
+    └── swift_ride_admin/

@@ -1,0 +1,3 @@
+"""
+Vehicles app initialization.
+"""

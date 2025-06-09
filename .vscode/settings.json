@@ -1,0 +1,13 @@
+{
+    "python.analysis.extraPaths": [
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend",
+        "./swift_ride_backend"
+    ]
+}

@@ -1,0 +1,486 @@
+swift_ride_admin/
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── .env.example
+├── .env.development
+├── .env.production
+├── .eslintrc.js
+├── .prettierrc
+├── tsconfig.json
+├── vite.config.ts
+├── tailwind.config.js
+├── postcss.config.js
+├── index.html
+├── README.md
+├── public/
+│   ├── favicon.ico
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── assets/
+│       ├── images/
+│       │   ├── logo.png
+│       │   ├── logo-dark.png
+│       │   └── placeholder.png
+│       └── icons/
+│           ├── dashboard.svg
+│           ├── users.svg
+│           ├── rides.svg
+│           ├── payments.svg
+│           ├── analytics.svg
+│           ├── settings.svg
+│           └── emergency.svg
+├── src/
+│   ├── main.tsx
+│   ├── App.tsx
+│   ├── vite-env.d.ts
+│   ├── components/
+│   │   ├── common/
+│   │   │   ├── Layout/
+│   │   │   │   ├── Layout.tsx
+│   │   │   │   ├── Sidebar.tsx
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   ├── Breadcrumb.tsx
+│   │   │   │   └── Navigation.tsx
+│   │   │   ├── UI/
+│   │   │   │   ├── Button/
+│   │   │   │   │   ├── Button.tsx
+│   │   │   │   │   ├── IconButton.tsx
+│   │   │   │   │   ├── LoadingButton.tsx
+│   │   │   │   │   └── Button.styles.ts
+│   │   │   │   ├── Input/
+│   │   │   │   │   ├── Input.tsx
+│   │   │   │   │   ├── TextArea.tsx
+│   │   │   │   │   ├── Select.tsx
+│   │   │   │   │   ├── DatePicker.tsx
+│   │   │   │   │   └── SearchInput.tsx
+│   │   │   │   ├── Modal/
+│   │   │   │   │   ├── Modal.tsx
+│   │   │   │   │   ├── ConfirmModal.tsx
+│   │   │   │   │   └── FormModal.tsx
+│   │   │   │   ├── Table/
+│   │   │   │   │   ├── Table.tsx
+│   │   │   │   │   ├── DataTable.tsx
+│   │   │   │   │   ├── TableHeader.tsx
+│   │   │   │   │   ├── TableRow.tsx
+│   │   │   │   │   └── TableCell.tsx
+│   │   │   │   ├── Card/
+│   │   │   │   │   ├── Card.tsx
+│   │   │   │   │   ├── StatsCard.tsx
+│   │   │   │   │   └── InfoCard.tsx
+│   │   │   │   ├── Badge/
+│   │   │   │   │   ├── Badge.tsx
+│   │   │   │   │   └── StatusBadge.tsx
+│   │   │   │   ├── Dropdown/
+│   │   │   │   │   ├── Dropdown.tsx
+│   │   │   │   │   └── ActionDropdown.tsx
+│   │   │   │   ├── Pagination/
+│   │   │   │   │   ├── Pagination.tsx
+│   │   │   │   │   └── PageSizeSelector.tsx
+│   │   │   │   ├── FileUpload/
+│   │   │   │   │   ├── FileUpload.tsx
+│   │   │   │   │   ├── ImageUpload.tsx
+│   │   │   │   │   └── DocumentUpload.tsx
+│   │   │   │   ├── Charts/
+│   │   │   │   │   ├── LineChart.tsx
+│   │   │   │   │   ├── BarChart.tsx
+│   │   │   │   │   ├── PieChart.tsx
+│   │   │   │   │   ├── AreaChart.tsx
+│   │   │   │   │   └── Heatmap.tsx
+│   │   │   │   ├── Tabs/
+│   │   │   │   │   ├── Tabs.tsx
+│   │   │   │   │   ├── TabPanel.tsx
+│   │   │   │   │   └── TabList.tsx
+│   │   │   │   └── Tooltip/
+│   │   │   │       ├── Tooltip.tsx
+│   │   │   │       └── InfoTooltip.tsx
+│   │   │   ├── Loading/
+│   │   │   │   ├── Spinner.tsx
+│   │   │   │   ├── Skeleton.tsx
+│   │   │   │   ├── ProgressBar.tsx
+│   │   │   │   └── LoadingOverlay.tsx
+│   │   │   ├── ErrorBoundary/
+│   │   │   │   ├── ErrorBoundary.tsx
+│   │   │   │   ├── ErrorFallback.tsx
+│   │   │   │   └── ErrorPage.tsx
+│   │   │   ├── Notifications/
+│   │   │   │   ├── Toast.tsx
+│   │   │   │   ├── Alert.tsx
+│   │   │   │   └── NotificationCenter.tsx
+│   │   │   ├── Forms/
+│   │   │   │   ├── FormField.tsx
+│   │   │   │   ├── FormValidation.tsx
+│   │   │   │   ├── FormWrapper.tsx
+│   │   │   │   └── FormActions.tsx
+│   │   │   └── Guards/
+│   │   │       ├── AuthGuard.tsx
+│   │   │       ├── PermissionGuard.tsx
+│   │   │       └── RoleGuard.tsx
+│   │   ├── dashboard/
+│   │   │   ├── Overview/
+│   │   │   │   ├── DashboardOverview.tsx
+│   │   │   │   ├── StatsCards.tsx
+│   │   │   │   ├── QuickActions.tsx
+│   │   │   │   └── RecentActivity.tsx
+│   │   │   ├── Charts/
+│   │   │   │   ├── RevenueChart.tsx
+│   │   │   │   ├── RidesChart.tsx
+│   │   │   │   ├── UserGrowthChart.tsx
+│   │   │   │   ├── HeatmapChart.tsx
+│   │   │   │   └── PerformanceChart.tsx
+│   │   │   ├── Stats/
+│   │   │   │   ├── RealTimeStats.tsx
+│   │   │   │   ├── PerformanceMetrics.tsx
+│   │   │   │   ├── ComparisonStats.tsx
+│   │   │   │   └── TrendIndicators.tsx
+│   │   │   └── Widgets/
+│   │   │       ├── ActiveRides.tsx
+│   │   │       ├── OnlineDrivers.tsx
+│   │   │       ├── RecentTransactions.tsx
+│   │   │       ├── SystemHealth.tsx
+│   │   │       ├── AlertsWidget.tsx
+│   │   │       └── WeatherWidget.tsx
+│   │   ├── users/
+│   │   │   ├── riders/
+│   │   │   │   ├── RidersList.tsx
+│   │   │   │   ├── RiderProfile.tsx
+│   │   │   │   ├── RiderActions.tsx
+│   │   │   │   ├── RiderAnalytics.tsx
+│   │   │   │   ├── RiderFilters.tsx
+│   │   │   │   ├── RiderForm.tsx
+│   │   │   │   └── RiderHistory.tsx
+│   │   │   ├── drivers/
+│   │   │   │   ├── DriversList.tsx
+│   │   │   │   ├── DriverProfile.tsx
+│   │   │   │   ├── DriverVerification.tsx
+│   │   │   │   ├── DriverActions.tsx
+│   │   │   │   ├── DriverDocuments.tsx
+│   │   │   │   ├── DriverAnalytics.tsx
+│   │   │   │   ├── DriverFilters.tsx
+│   │   │   │   ├── DriverForm.tsx
+│   │   │   │   └── DriverEarnings.tsx
+│   │   │   ├── admins/
+│   │   │   │   ├── AdminsList.tsx
+│   │   │   │   ├── AdminProfile.tsx
+│   │   │   │   ├── AdminForm.tsx
+│   │   │   │   └── AdminPermissions.tsx
+│   │   │   └── shared/
+│   │   │       ├── UserCard.tsx
+│   │   │       ├── UserStatus.tsx
+│   │   │       ├── UserActions.tsx
+│   │   │       ├── UserSearch.tsx
+│   │   │       ├── UserFilters.tsx
+│   │   │       └── UserExport.tsx
+│   │   ├── rides/
+│   │   │   ├── RidesList.tsx
+│   │   │   ├── RideDetails.tsx
+│   │   │   ├── RideAnalytics.tsx
+│   │   │   ├── RideMap.tsx
+│   │   │   ├── RideFilters.tsx
+│   │   │   ├── BargainHistory.tsx
+│   │   │   ├── RideDispute.tsx
+│   │   │   ├── RideTracking.tsx
+│   │   │   ├── RideExport.tsx
+│   │   │   └── RideActions.tsx
+│   │   ├── payments/
+│   │   │   ├── TransactionsList.tsx
+│   │   │   ├── PaymentAnalytics.tsx
+│   │   │   ├── RefundManagement.tsx
+│   │   │   ├── PaymentMethods.tsx
+│   │   │   ├── FinancialReports.tsx
+│   │   │   ├── PaymentFilters.tsx
+│   │   │   ├── PaymentDetails.tsx
+│   │   │   ├── WalletManagement.tsx
+│   │   │   └── PaymentExport.tsx
+│   │   ├── emergency/
+│   │   │   ├── EmergencyReports.tsx
+│   │   │   ├── EmergencyResponse.tsx
+│   │   │   ├── EmergencyMap.tsx
+│   │   │   ├── EmergencyContacts.tsx
+│   │   │   ├── EmergencyAnalytics.tsx
+│   │   │   ├── EmergencyFilters.tsx
+│   │   │   ├── EmergencyDetails.tsx
+│   │   │   └── EmergencyActions.tsx
+│   │   ├── analytics/
+│   │   │   ├── ReportsGenerator.tsx
+│   │   │   ├── CustomReports.tsx
+│   │   │   ├── DataExport.tsx
+│   │   │   ├── TrendAnalysis.tsx
+│   │   │   ├── PredictiveAnalytics.tsx
+│   │   │   ├── ReportFilters.tsx
+│   │   │   ├── ReportScheduler.tsx
+│   │   │   └── DataVisualization.tsx
+│   │   ├── promotions/
+│   │   │   ├── PromoCodesList.tsx
+│   │   │   ├── CreatePromoCode.tsx
+│   │   │   ├── ReferralProgram.tsx
+│   │   │   ├── CampaignAnalytics.tsx
+│   │   │   ├── PromoFilters.tsx
+│   │   │   ├── PromoForm.tsx
+│   │   │   └── PromoActions.tsx
+│   │   ├── notifications/
+│   │   │   ├── NotificationCenter.tsx
+│   │   │   ├── BroadcastMessage.tsx
+│   │   │   ├── NotificationTemplates.tsx
+│   │   │   ├── NotificationAnalytics.tsx
+│   │   │   ├── NotificationFilters.tsx
+│   │   │   ├── NotificationForm.tsx
+│   │   │   └── NotificationScheduler.tsx
+│   │   ├── settings/
+│   │   │   ├── SystemSettings.tsx
+│   │   │   ├── UserManagement.tsx
+│   │   │   ├── RolePermissions.tsx
+│   │   │   ├── APIConfiguration.tsx
+│   │   │   ├── SecuritySettings.tsx
+│   │   │   ├── BackupRestore.tsx
+│   │   │   ├── AuditLogs.tsx
+│   │   │   ├── GeneralSettings.tsx
+│   │   │   └── IntegrationSettings.tsx
+│   │   ├── support/
+│   │   │   ├── TicketsList.tsx
+│   │   │   ├── TicketDetails.tsx
+│   │   │   ├── LiveChat.tsx
+│   │   │   ├── KnowledgeBase.tsx
+│   │   │   ├── SupportAnalytics.tsx
+│   │   │   ├── TicketFilters.tsx
+│   │   │   ├── TicketForm.tsx
+│   │   │   └── SupportActions.tsx
+│   │   └── vehicles/
+│   │       ├── VehiclesList.tsx
+│   │       ├── VehicleDetails.tsx
+│   │       ├── VehicleVerification.tsx
+│   │       ├── VehicleDocuments.tsx
+│   │       ├── VehicleFilters.tsx
+│   │       ├── VehicleForm.tsx
+│   │       └── VehicleActions.tsx
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── useApi.ts
+│   │   ├── useSocket.ts
+│   │   ├── useLocalStorage.ts
+│   │   ├── useSessionStorage.ts
+│   │   ├── useDebounce.ts
+│   │   ├── usePagination.ts
+│   │   ├── useFilters.ts
+│   │   ├── usePermissions.ts
+│   │   ├── useNotifications.ts
+│   │   ├── useTheme.ts
+│   │   ├── useForm.ts
+│   │   ├── useTable.ts
+│   │   ├── useModal.ts
+│   │   └── useExport.ts
+│   ├── services/
+│   │   ├── api/
+│   │   │   ├── apiClient.ts
+│   │   │   ├── endpoints.ts
+│   │   │   ├── interceptors.ts
+│   │   │   ├── types.ts
+│   │   │   └── errorHandler.ts
+│   │   ├── auth/
+│   │   │   ├── authService.ts
+│   │   │   ├── tokenService.ts
+│   │   │   ├── permissionService.ts
+│   │   │   └── roleService.ts
+│   │   ├── socket/
+│   │   │   ├── socketService.ts
+│   │   │   ├── socketEvents.ts
+│   │   │   └── socketHandlers.ts
+│   │   ├── storage/
+│   │   │   ├── localStorage.ts
+│   │   │   ├── sessionStorage.ts
+│   │   │   └── cookieStorage.ts
+│   │   ├── notifications/
+│   │   │   ├── notificationService.ts
+│   │   │   ├── toastService.ts
+│   │   │   └── pushService.ts
+│   │   ├── analytics/
+│   │   │   ├── analyticsService.ts
+│   │   │   ├── trackingService.ts
+│   │   │   └── reportService.ts
+│   │   ├── export/
+│   │   │   ├── exportService.ts
+│   │   │   ├── pdfService.ts
+│   │   │   ├── csvService.ts
+│   │   │   └── excelService.ts
+│   │   └── validation/
+│   │       ├── validationService.ts
+│   │       ├── schemas.ts
+│   │       └── rules.ts
+│   ├── utils/
+│   │   ├── constants.ts
+│   │   ├── helpers.ts
+│   │   ├── validators.ts
+│   │   ├── formatters.ts
+│   │   ├── dateUtils.ts
+│   │   ├── fileUtils.ts
+│   │   ├── exportUtils.ts
+│   │   ├── errorUtils.ts
+│   │   ├── stringUtils.ts
+│   │   ├── numberUtils.ts
+│   │   ├── urlUtils.ts
+│   │   └── colorUtils.ts
+│   ├── types/
+│   │   ├── api.ts
+│   │   ├── auth.ts
+│   │   ├── user.ts
+│   │   ├── ride.ts
+│   │   ├── payment.ts
+│   │   ├── emergency.ts
+│   │   ├── analytics.ts
+│   │   ├── notification.ts
+│   │   ├── promotion.ts
+│   │   ├── vehicle.ts
+│   │   ├── support.ts
+│   │   └── common.ts
+│   ├── contexts/
+│   │   ├── AuthContext.tsx
+│   │   ├── ThemeContext.tsx
+│   │   ├── NotificationContext.tsx
+│   │   ├── PermissionContext.tsx
+│   │   ├── SocketContext.tsx
+│   │   └── AppContext.tsx
+│   ├── store/
+│   │   ├── index.ts
+│   │   ├── rootReducer.ts
+│   │   ├── slices/
+│   │   │   ├── authSlice.ts
+│   │   │   ├── userSlice.ts
+│   │   │   ├── rideSlice.ts
+│   │   │   ├── paymentSlice.ts
+│   │   │   ├── analyticsSlice.ts
+│   │   │   ├── notificationSlice.ts
+│   │   │   ├── emergencySlice.ts
+│   │   │   ├── promotionSlice.ts
+│   │   │   ├── vehicleSlice.ts
+│   │   │   ├── supportSlice.ts
+│   │   │   └── uiSlice.ts
+│   │   ├── middleware/
+│   │   │   ├── apiMiddleware.ts
+│   │   │   ├── loggerMiddleware.ts
+│   │   │   ├── errorMiddleware.ts
+│   │   │   └── authMiddleware.ts
+│   │   └── selectors/
+│   │       ├── authSelectors.ts
+│   │       ├── userSelectors.ts
+│   │       ├── rideSelectors.ts
+│   │       ├── paymentSelectors.ts
+│   │       └── analyticsSelectors.ts
+│   ├── pages/
+│   │   ├── auth/
+│   │   │   ├── LoginPage.tsx
+│   │   │   ├── ForgotPasswordPage.tsx
+│   │   │   └── ResetPasswordPage.tsx
+│   │   ├── dashboard/
+│   │   │   └── DashboardPage.tsx
+│   │   ├── users/
+│   │   │   ├── UsersPage.tsx
+│   │   │   ├── RidersPage.tsx
+│   │   │   ├── DriversPage.tsx
+│   │   │   └── AdminsPage.tsx
+│   │   ├── rides/
+│   │   │   └── RidesPage.tsx
+│   │   ├── payments/
+│   │   │   └── PaymentsPage.tsx
+│   │   ├── emergency/
+│   │   │   └── EmergencyPage.tsx
+│   │   ├── analytics/
+│   │   │   └── AnalyticsPage.tsx
+│   │   ├── promotions/
+│   │   │   └── PromotionsPage.tsx
+│   │   ├── notifications/
+│   │   │   └── NotificationsPage.tsx
+│   │   ├── settings/
+│   │   │   └── SettingsPage.tsx
+│   │   ├── support/
+│   │   │   └── SupportPage.tsx
+│   │   ├── vehicles/
+│   │   │   └── VehiclesPage.tsx
+│   │   └── error/
+│   │       ├── NotFoundPage.tsx
+│   │       ├── UnauthorizedPage.tsx
+│   │       └── ServerErrorPage.tsx
+│   ├── routes/
+│   │   ├── AppRoutes.tsx
+│   │   ├── ProtectedRoute.tsx
+│   │   ├── PublicRoute.tsx
+│   │   └── routeConfig.ts
+│   ├── styles/
+│   │   ├── globals.css
+│   │   ├── variables.css
+│   │   ├── components/
+│   │   │   ├── layout.css
+│   │   │   ├── dashboard.css
+│   │   │   ├── forms.css
+│   │   │   ├── tables.css
+│   │   │   ├── charts.css
+│   │   │   └── modals.css
+│   │   ├── themes/
+│   │   │   ├── light.css
+│   │   │   ├── dark.css
+│   │   │   └── theme.css
+│   │   ├── utilities/
+│   │   │   ├── animations.css
+│   │   │   ├── responsive.css
+│   │   │   ├── spacing.css
+│   │   │   └── typography.css
+│   │   └── vendor/
+│   │       ├── normalize.css
+│   │       └── custom.css
+│   ├── config/
+│   │   ├── environment.ts
+│   │   ├── routes.ts
+│   │   ├── permissions.ts
+│   │   ├── theme.ts
+│   │   ├── api.ts
+│   │   └── constants.ts
+│   └── assets/
+│       ├── images/
+│       │   ├── avatars/
+│       │   ├── illustrations/
+│       │   └── backgrounds/
+│       ├── icons/
+│       │   ├── navigation/
+│       │   ├── actions/
+│       │   └── status/
+│       └── fonts/
+│           ├── inter/
+│           └── custom/
+├── tests/
+│   ├── __mocks__/
+│   │   ├── api.ts
+│   │   ├── localStorage.ts
+│   │   └── socket.ts
+│   ├── setup/
+│   │   ├── setupTests.ts
+│   │   ├── testUtils.tsx
+│   │   └── mockData.ts
+│   ├── unit/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── store/
+│   ├── integration/
+│   │   ├── auth.test.tsx
+│   │   ├── dashboard.test.tsx
+│   │   ├── users.test.tsx
+│   │   └── rides.test.tsx
+│   └── e2e/
+│       ├── auth.spec.ts
+│       ├── dashboard.spec.ts
+│       ├── users.spec.ts
+│       └── rides.spec.ts
+├── docs/
+│   ├── README.md
+│   ├── DEPLOYMENT.md
+│   ├── API.md
+│   ├── CONTRIBUTING.md
+│   ├── TESTING.md
+│   └── ARCHITECTURE.md
+├── scripts/
+│   ├── build.sh
+│   ├── deploy.sh
+│   ├── test.sh
+│   └── setup.sh
+└── dist/

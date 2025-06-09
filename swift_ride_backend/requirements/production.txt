@@ -1,0 +1,6 @@
+# Production requirements
+-r base.txt
+gunicorn==21.2.0
+sentry-sdk==1.39.1
+django-storages[s3]==1.14.2
+django-anymail==10.2

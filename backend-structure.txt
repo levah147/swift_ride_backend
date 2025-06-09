@@ -1,0 +1,533 @@
+swift_ride_backend/
+├── manage.py
+├── requirements/
+│   ├── base.txt
+│   ├── development.txt
+│   ├── production.txt
+│   └── testing.txt
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── docker-compose.yml
+├── pytest.ini
+├── .coverage
+├── scripts/
+│   ├── setup.sh
+│   ├── deploy.sh
+│   ├── backup_db.sh
+│   ├── migrate.sh
+│   └── test.sh
+├── swift_backend/
+│   ├── __init__.py
+│   ├── settings/
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── development.py
+│   │   ├── production.py
+│   │   ├── staging.py
+│   │   └── testing.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   ├── asgi.py
+│   ├── celery.py
+│   └── routing.py
+├── apps/
+│   ├── __init__.py
+│   ├── authentication/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── managers.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── signals.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── otp_service.py
+│   │   │   ├── jwt_service.py
+│   │   │   └── auth_service.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_serializers.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_utils.py
+│   │   └── migrations/
+│   │       └── __init__.py
+│   ├── users/
+│   │   ├── __init__.py
+│   │   ├── models.py          # CustomUser, RiderProfile, DriverProfile, UserPreferences
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── managers.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── signals.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── user_service.py
+│   │   │   ├── profile_service.py
+│   │   │   └── verification_service.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_serializers.py
+│   │   │   └── test_services.py
+│   │   └── migrations/
+│   ├── rides/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Ride, RideRequest, BargainOffer, RideHistory, TripStatus
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── tasks.py
+│   │   ├── signals.py
+│   │   ├── managers.py
+│   │   ├── filters.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── ride_matching.py
+│   │   │   ├── fare_calculator.py
+│   │   │   ├── bargain_handler.py
+│   │   │   ├── ride_tracker.py
+│   │   │   ├── route_optimizer.py
+│   │   │   └── driver_allocator.py
+│   │   ├── consumers.py       # WebSocket consumers for real-time updates
+│   │   ├── routing.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_serializers.py
+│   │   │   ├── test_services.py
+│   │   │   ├── test_consumers.py
+│   │   │   └── test_tasks.py
+│   │   └── migrations/
+│   ├── vehicles/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Vehicle, VehicleType, VehicleDocument, Insurance, Inspection
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── signals.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── vehicle_service.py
+│   │   │   ├── document_service.py
+│   │   │   └── verification_service.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_serializers.py
+│   │   │   └── test_services.py
+│   │   └── migrations/
+│   ├── chat/
+│   │   ├── __init__.py
+│   │   ├── models.py          # ChatRoom, Message, VoiceNote, FileAttachment, MessageStatus
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── consumers.py       # WebSocket consumers for real-time chat
+│   │   ├── routing.py
+│   │   ├── signals.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── chat_service.py
+│   │   │   ├── voice_processor.py
+│   │   │   ├── message_handler.py
+│   │   │   └── file_handler.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_consumers.py
+│   │   │   └── test_services.py
+│   │   └── migrations/
+│   ├── payments/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Payment, PaymentMethod, Transaction, Wallet, Refund
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── signals.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── providers/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py
+│   │   │   ├── paystack.py
+│   │   │   ├── flutterwave.py
+│   │   │   ├── stripe.py
+│   │   │   ├── bank_transfer.py
+│   │   │   └── cash_payment.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── payment_processor.py
+│   │   │   ├── wallet_manager.py
+│   │   │   ├── refund_service.py
+│   │   │   └── billing_service.py
+│   │   ├── webhooks/
+│   │   │   ├── __init__.py
+│   │   │   ├── paystack_webhook.py
+│   │   │   ├── flutterwave_webhook.py
+│   │   │   └── stripe_webhook.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_providers.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_webhooks.py
+│   │   └── migrations/
+│   ├── reviews/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Review, Rating, VoiceReview, ReviewResponse, ReviewFlag
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── signals.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── review_service.py
+│   │   │   ├── sentiment_analyzer.py
+│   │   │   ├── moderation_service.py
+│   │   │   └── rating_calculator.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_serializers.py
+│   │   │   └── test_services.py
+│   │   └── migrations/
+│   ├── emergency/
+│   │   ├── __init__.py
+│   │   ├── models.py          # EmergencyReport, EmergencyContact, SOSAlert, EmergencyResponse
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── tasks.py
+│   │   ├── signals.py
+│   │   ├── consumers.py       # Real-time emergency alerts
+│   │   ├── routing.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── emergency_handler.py
+│   │   │   ├── alert_dispatcher.py
+│   │   │   ├── response_coordinator.py
+│   │   │   └── location_tracker.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_consumers.py
+│   │   └── migrations/
+│   ├── notifications/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Notification, PushToken, NotificationTemplate, NotificationLog
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── tasks.py
+│   │   ├── signals.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── notification_service.py
+│   │   │   ├── firebase_service.py
+│   │   │   ├── sms_service.py
+│   │   │   ├── email_service.py
+│   │   │   └── push_notification.py
+│   │   ├── templates/
+│   │   │   ├── ride_request.py
+│   │   │   ├── payment_success.py
+│   │   │   ├── emergency_alert.py
+│   │   │   └── promotional.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_tasks.py
+│   │   └── migrations/
+│   ├── analytics/
+│   │   ├── __init__.py
+│   │   ├── models.py          # TripAnalytics, UserBehavior, PerformanceMetrics, RevenueReport
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── analytics_service.py
+│   │   │   ├── data_aggregator.py
+│   │   │   ├── report_generator.py
+│   │   │   ├── metrics_calculator.py
+│   │   │   └── dashboard_service.py
+│   │   ├── reports/
+│   │   │   ├── __init__.py
+│   │   │   ├── daily_report.py
+│   │   │   ├── weekly_report.py
+│   │   │   ├── monthly_report.py
+│   │   │   └── custom_report.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_reports.py
+│   │   └── migrations/
+│   ├── locations/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Location, SavedPlace, PopularDestination, GeofenceArea
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── location_service.py
+│   │   │   ├── geocoding.py
+│   │   │   ├── route_optimizer.py
+│   │   │   ├── location_tracker.py
+│   │   │   └── geofence_service.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_utils.py
+│   │   └── migrations/
+│   ├── promotions/
+│   │   ├── __init__.py
+│   │   ├── models.py          # Promo, Coupon, ReferralProgram, LoyaltyPoint, Campaign
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── validators.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── promo_engine.py
+│   │   │   ├── referral_service.py
+│   │   │   ├── loyalty_service.py
+│   │   │   └── campaign_manager.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_validators.py
+│   │   └── migrations/
+│   ├── ai_features/
+│   │   ├── __init__.py
+│   │   ├── models.py          # AIPreference, VoiceCommand, SmartSuggestion, MLModel
+│   │   ├── views.py
+│   │   ├── serializers.py
+│   │   ├── urls.py
+│   │   ├── permissions.py
+│   │   ├── utils.py
+│   │   ├── tasks.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── voice_recognition.py
+│   │   │   ├── smart_pricing.py
+│   │   │   ├── route_prediction.py
+│   │   │   ├── demand_forecasting.py
+│   │   │   ├── ml_service.py
+│   │   │   └── recommendation_engine.py
+│   │   ├── ml_models/
+│   │   │   ├── __init__.py
+│   │   │   ├── fare_prediction.py
+│   │   │   ├── demand_prediction.py
+│   │   │   └── route_optimization.py
+│   │   ├── tests/
+│   │   │   ├── __init__.py
+│   │   │   ├── test_models.py
+│   │   │   ├── test_views.py
+│   │   │   ├── test_services.py
+│   │   │   └── test_ml_models.py
+│   │   └── migrations/
+│   └── common/
+│       ├── __init__.py
+│       ├── models.py          # BaseModel, TimeStampedModel, SoftDeleteModel
+│       ├── permissions.py     # Custom permissions
+│       ├── validators.py
+│       ├── utils.py
+│       ├── exceptions.py
+│       ├── middleware.py
+│       ├── decorators.py
+│       ├── pagination.py
+│       ├── filters.py
+│       ├── constants.py
+│       ├── mixins.py
+│       └── managers.py
+├── core/
+│   ├── __init__.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── location_service.py
+│   │   ├── fare_calculator.py
+│   │   ├── matching_service.py
+│   │   ├── sms_service.py
+│   │   ├── ai_service.py
+│   │   ├── cache_service.py
+│   │   ├── file_service.py
+│   │   ├── email_service.py
+│   │   └── backup_service.py
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── distance.py
+│   │   ├── geocoding.py
+│   │   ├── validators.py
+│   │   ├── helpers.py
+│   │   ├── formatters.py
+│   │   ├── encryption.py
+│   │   └── security.py
+│   ├── constants/
+│   │   ├── __init__.py
+│   │   ├── ride_status.py
+│   │   ├── user_types.py
+│   │   ├── payment_status.py
+│   │   ├── languages.py
+│   │   ├── error_codes.py
+│   │   ├── notification_types.py
+│   │   └── vehicle_types.py
+│   ├── integrations/
+│   │   ├── __init__.py
+│   │   ├── google_maps.py
+│   │   ├── firebase.py
+│   │   ├── twilio.py
+│   │   ├── aws_s3.py
+│   │   ├── redis_client.py
+│   │   └── elasticsearch.py
+│   └── middleware/
+│       ├── __init__.py
+│       ├── cors_middleware.py
+│       ├── auth_middleware.py
+│       ├── logging_middleware.py
+│       └── rate_limiting.py
+├── static/
+│   ├── admin/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── media/
+│   ├── uploads/
+│   │   ├── profiles/
+│   │   ├── vehicles/
+│   │   ├── documents/
+│   │   ├── voice_notes/
+│   │   └── chat_files/
+│   └── temp/
+├── templates/
+│   ├── emails/
+│   │   ├── welcome.html
+│   │   ├── otp_verification.html
+│   │   ├── ride_confirmation.html
+│   │   └── payment_receipt.html
+│   ├── admin/
+│   │   └── custom_admin.html
+│   └── api/
+│       └── documentation.html
+├── logs/
+│   ├── django.log
+│   ├── celery.log
+│   ├── error.log
+│   └── access.log
+├── fixtures/
+│   ├── initial_data.json
+│   ├── test_data.json
+│   └── demo_data.json
+├── locale/
+│   ├── en/
+│   │   └── LC_MESSAGES/
+│   │       ├── django.po
+│   │       └── django.mo
+│   ├── yo/  # Yoruba
+│   │   └── LC_MESSAGES/
+│   ├── ha/  # Hausa
+│   │   └── LC_MESSAGES/
+│   └── ig/  # Igbo
+│       └── LC_MESSAGES/
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py
+│   ├── factories.py
+│   ├── integration/
+│   ├── unit/
+│   └── fixtures/
+└── docs/
+    ├── api/
+    │   ├── authentication.md
+    │   ├── rides.md
+    │   ├── payments.md
+    │   └── websockets.md
+    ├── deployment/
+    │   ├── production.md
+    │   ├── staging.md
+    │   └── docker.md
+    └── development/
+        ├── setup.md
+        ├── testing.md
+        └── contributing.md

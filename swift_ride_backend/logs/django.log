@@ -1,0 +1,117 @@
+INFO 2025-06-08 14:29:58,243 autoreload 16216 3532 Watching for file changes with StatReloader
+INFO 2025-06-09 00:54:25,997 autoreload 10680 8404 Watching for file changes with StatReloader
+INFO 2025-06-09 00:54:33,728 basehttp 10680 17196 "GET /admin/rides/ HTTP/1.1" 200 56491
+INFO 2025-06-09 00:54:33,875 basehttp 10680 17196 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 29444
+INFO 2025-06-09 00:54:34,214 basehttp 10680 17196 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-06-09 00:54:34,743 basehttp 10680 9876 "GET /admin/rides/ HTTP/1.1" 200 56490
+INFO 2025-06-09 00:54:36,809 basehttp 10680 17196 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:36,848 basehttp 10680 17196 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,856 basehttp 10680 20460 "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,865 basehttp 10680 17196 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,873 basehttp 10680 17196 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,877 basehttp 10680 3596 "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,879 basehttp 10680 3360 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,888 basehttp 10680 17196 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,904 basehttp 10680 15476 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,943 basehttp 10680 3596 "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:36,979 basehttp 10680 3596 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:37,287 basehttp 10680 9876 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:44,171 basehttp 10680 14596 "GET /admin/analytics/analyticssettings/ HTTP/1.1" 200 51271
+INFO 2025-06-09 00:54:44,220 basehttp 10680 14596 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,259 basehttp 10680 15196 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,259 basehttp 10680 19548 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,261 basehttp 10680 15596 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,263 basehttp 10680 19548 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,276 basehttp 10680 17660 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,278 basehttp 10680 14596 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,287 basehttp 10680 12272 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,303 basehttp 10680 12272 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,306 basehttp 10680 14596 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:44,599 basehttp 10680 1988 "GET /admin/analytics/analyticssettings/ HTTP/1.1" 200 51271
+INFO 2025-06-09 00:54:45,744 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:46,137 basehttp 10680 1988 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:48,237 basehttp 10680 14596 "GET /admin/analytics/analyticsevent/ HTTP/1.1" 200 56689
+INFO 2025-06-09 00:54:48,544 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:54:48,832 basehttp 10680 18132 "GET /admin/analytics/analyticsevent/ HTTP/1.1" 200 56689
+INFO 2025-06-09 00:54:49,562 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:49,936 basehttp 10680 18132 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:51,890 basehttp 10680 14596 "GET /admin/analytics/analyticsreport/ HTTP/1.1" 200 55525
+INFO 2025-06-09 00:54:52,170 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:54:52,480 basehttp 10680 18132 "GET /admin/analytics/analyticsreport/ HTTP/1.1" 200 55525
+INFO 2025-06-09 00:54:53,255 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:53,676 basehttp 10680 18132 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:54:56,855 basehttp 10680 14596 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
+INFO 2025-06-09 00:54:56,912 basehttp 10680 12784 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,925 basehttp 10680 12784 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,929 basehttp 10680 620 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,944 basehttp 10680 9508 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,944 basehttp 10680 620 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,958 basehttp 10680 9508 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,975 basehttp 10680 9508 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:56,983 basehttp 10680 9508 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-09 00:54:57,091 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:54:57,725 basehttp 10680 18132 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
+INFO 2025-06-09 00:55:04,946 basehttp 10680 13752 "GET /admin/users/customuser/4b2cd4bf-703c-40f2-bd56-83e6b60f38eb/change/?_to_field=id HTTP/1.1" 200 90485
+INFO 2025-06-09 00:55:05,014 basehttp 10680 20684 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:55:05,019 basehttp 10680 2136 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2025-06-09 00:55:05,112 basehttp 10680 13752 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:55:05,511 basehttp 10680 16808 "GET /admin/users/customuser/4b2cd4bf-703c-40f2-bd56-83e6b60f38eb/change/?_to_field=id HTTP/1.1" 200 90485
+INFO 2025-06-09 00:55:12,391 basehttp 10680 10640 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
+INFO 2025-06-09 00:55:12,795 basehttp 10680 20804 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
+INFO 2025-06-09 00:55:15,736 basehttp 10680 10640 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:16,121 basehttp 10680 20804 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:22,154 basehttp 10680 12616 "GET /admin/analytics/geographicanalytics/ HTTP/1.1" 200 52974
+INFO 2025-06-09 00:55:22,309 basehttp 10680 12616 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:55:22,612 basehttp 10680 18288 "GET /admin/analytics/geographicanalytics/ HTTP/1.1" 200 52974
+INFO 2025-06-09 00:55:23,353 basehttp 10680 12616 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:23,721 basehttp 10680 18288 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:26,006 basehttp 10680 12616 "GET /admin/analytics/paymentanalytics/ HTTP/1.1" 200 52659
+INFO 2025-06-09 00:55:26,158 basehttp 10680 12616 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:55:26,492 basehttp 10680 18288 "GET /admin/analytics/paymentanalytics/ HTTP/1.1" 200 52659
+INFO 2025-06-09 00:55:27,389 basehttp 10680 12616 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:27,783 basehttp 10680 18288 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:32,775 basehttp 10680 21112 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
+INFO 2025-06-09 00:55:32,933 basehttp 10680 21112 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:55:33,261 basehttp 10680 17696 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
+INFO 2025-06-09 00:55:34,974 basehttp 10680 21112 "GET /admin/analytics/driverperformanceanalytics/add/ HTTP/1.1" 200 83246
+INFO 2025-06-09 00:55:35,121 basehttp 10680 21112 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 00:55:35,453 basehttp 10680 17696 "GET /admin/analytics/driverperformanceanalytics/add/ HTTP/1.1" 200 83246
+INFO 2025-06-09 00:55:39,685 basehttp 10680 12296 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
+INFO 2025-06-09 00:55:40,045 basehttp 10680 1908 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
+INFO 2025-06-09 00:55:41,916 basehttp 10680 12296 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:42,275 basehttp 10680 1908 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:47,428 basehttp 10680 12296 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 00:55:47,805 basehttp 10680 1908 "GET /admin/ HTTP/1.1" 200 116251
+INFO 2025-06-09 01:37:44,256 autoreload 10680 8404 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-06-09 01:37:52,715 autoreload 7568 4068 Watching for file changes with StatReloader
+INFO 2025-06-09 01:38:36,496 autoreload 7568 4068 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-06-09 01:38:39,816 autoreload 17444 17400 Watching for file changes with StatReloader
+INFO 2025-06-09 01:40:21,133 autoreload 17444 17400 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-06-09 01:40:22,812 autoreload 17836 13732 Watching for file changes with StatReloader
+INFO 2025-06-09 01:40:58,580 autoreload 17836 13732 D:\CODE_NOW\swift_ride_backend\apps\users\models.py changed, reloading.
+INFO 2025-06-09 01:41:00,295 autoreload 3196 21304 Watching for file changes with StatReloader
+INFO 2025-06-09 01:41:42,653 autoreload 3196 21304 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-06-09 01:41:45,276 autoreload 2196 16444 Watching for file changes with StatReloader
+INFO 2025-06-09 01:41:56,841 autoreload 2196 16444 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-06-09 01:41:58,236 autoreload 19940 15024 Watching for file changes with StatReloader
+INFO 2025-06-09 01:42:23,386 autoreload 19940 15024 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:42:24,692 autoreload 7732 8208 Watching for file changes with StatReloader
+INFO 2025-06-09 01:43:21,989 autoreload 7732 8208 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:43:23,270 autoreload 8076 2748 Watching for file changes with StatReloader
+INFO 2025-06-09 01:43:30,520 autoreload 8076 2748 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:43:31,818 autoreload 16612 9792 Watching for file changes with StatReloader
+INFO 2025-06-09 01:43:40,085 autoreload 16612 9792 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:43:41,371 autoreload 19316 12700 Watching for file changes with StatReloader
+INFO 2025-06-09 01:43:45,464 autoreload 19316 12700 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:43:46,784 autoreload 19936 20452 Watching for file changes with StatReloader
+INFO 2025-06-09 01:44:04,854 autoreload 16160 16004 Watching for file changes with StatReloader
+INFO 2025-06-09 01:47:13,312 autoreload 16160 16004 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
+INFO 2025-06-09 01:47:21,152 autoreload 11448 19784 Watching for file changes with StatReloader
+INFO 2025-06-09 01:48:12,406 autoreload 21304 16808 Watching for file changes with StatReloader
+INFO 2025-06-09 01:48:17,696 basehttp 21304 17096 "GET /admin/ HTTP/1.1" 200 128271
+INFO 2025-06-09 01:48:18,507 basehttp 21304 4772 "GET /admin/ HTTP/1.1" 200 128270
+INFO 2025-06-09 01:48:26,254 basehttp 21304 17096 "GET /admin/reviews/review/ HTTP/1.1" 200 59496
+INFO 2025-06-09 01:48:26,478 basehttp 21304 17096 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-09 01:48:26,859 basehttp 21304 4772 "GET /admin/reviews/review/ HTTP/1.1" 200 59496
+INFO 2025-06-09 01:48:28,299 basehttp 21304 17096 "GET /admin/ HTTP/1.1" 200 128270
+INFO 2025-06-09 01:48:28,654 basehttp 21304 4772 "GET /admin/ HTTP/1.1" 200 128270
