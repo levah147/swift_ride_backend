@@ -179,7 +179,8 @@ class UserDocument(BaseModel):
         max_length=20,
         choices=DocumentType.choices
     )
-    document_number = models.CharField(max_length=50)
+    document_number = models.CharField(max_length=50, null=True,
+        blank=True)
     document_file = models.FileField(
         upload_to='documents/',
         null=True,
