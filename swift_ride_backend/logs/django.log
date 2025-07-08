@@ -116,3 +116,26 @@ INFO 2025-07-07 13:11:35,611 autoreload 19668 14776 Watching for file changes wi
 INFO 2025-07-07 13:34:41,942 autoreload 19668 14776 D:\CODE_NOW\swift_ride_backend\apps\common\apps.py changed, reloading.
 INFO 2025-07-07 13:34:49,580 autoreload 5328 19572 Watching for file changes with StatReloader
 INFO 2025-07-08 11:11:37,805 autoreload 21836 2888 Watching for file changes with StatReloader
+INFO 2025-07-08 11:24:54,332 autoreload 23508 22884 Watching for file changes with StatReloader
+INFO 2025-07-08 11:38:59,351 autoreload 23508 22884 D:\CODE_NOW\swift_ride_backend\apps\users\models.py changed, reloading.
+INFO 2025-07-08 11:39:04,105 autoreload 21800 17016 Watching for file changes with StatReloader
+INFO 2025-07-08 11:39:27,592 autoreload 21800 17016 D:\CODE_NOW\swift_ride_backend\apps\users\admin.py changed, reloading.
+INFO 2025-07-08 11:39:29,847 autoreload 9436 19888 Watching for file changes with StatReloader
+INFO 2025-07-08 11:39:38,245 autoreload 9436 19888 D:\CODE_NOW\swift_ride_backend\apps\users\admin.py changed, reloading.
+INFO 2025-07-08 11:39:40,649 autoreload 15200 18244 Watching for file changes with StatReloader
+INFO 2025-07-08 11:39:47,595 autoreload 15200 18244 D:\CODE_NOW\swift_ride_backend\apps\users\admin.py changed, reloading.
+INFO 2025-07-08 11:39:49,654 autoreload 25232 7720 Watching for file changes with StatReloader
+INFO 2025-07-08 11:39:54,382 autoreload 25232 7720 D:\CODE_NOW\swift_ride_backend\apps\users\admin.py changed, reloading.
+INFO 2025-07-08 11:39:57,390 autoreload 5000 21152 Watching for file changes with StatReloader
+INFO 2025-07-08 11:40:38,506 autoreload 5000 21152 D:\CODE_NOW\swift_ride_backend\apps\users\signals.py changed, reloading.
+INFO 2025-07-08 11:40:40,331 autoreload 14180 12916 Watching for file changes with StatReloader
+INFO 2025-07-08 11:44:53,273 autoreload 14180 12916 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-07-08 11:44:55,443 autoreload 25160 17188 Watching for file changes with StatReloader
+INFO 2025-07-08 11:58:53,346 autoreload 25160 17188 D:\CODE_NOW\swift_ride_backend\apps\vehicles\services\inspection_service.py changed, reloading.
+INFO 2025-07-08 11:59:03,475 autoreload 4112 8756 Watching for file changes with StatReloader
+INFO 2025-07-08 12:10:55,785 autoreload 4112 8756 D:\CODE_NOW\swift_ride_backend\apps\chat\services\chat_service.py changed, reloading.
+INFO 2025-07-08 12:11:00,361 autoreload 6872 1984 Watching for file changes with StatReloader
+INFO 2025-07-08 12:29:27,525 autoreload 6872 1984 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
+INFO 2025-07-08 12:29:31,890 autoreload 24800 2908 Watching for file changes with StatReloader
+INFO 2025-07-08 12:31:22,629 autoreload 24800 2908 D:\CODE_NOW\swift_ride_backend\apps\payments\services\payment_service.py changed, reloading.
+INFO 2025-07-08 12:31:24,890 autoreload 9024 17492 Watching for file changes with StatReloader

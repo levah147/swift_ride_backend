@@ -5,7 +5,7 @@ Signals for user models.
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from .models import CustomUser, RiderProfile, DriverProfile, UserPreferences
+from .models import CustomUser, RiderProfile, DriverProfile, UserPreferences, UserProfile
 
 
 @receiver(post_save, sender=CustomUser)
@@ -16,6 +16,9 @@ def create_user_profile(sender, instance, created, **kwargs):
     if created:
         # Create user preferences
         UserPreferences.objects.create(user=instance)
+        
+        # Create general user profile
+        UserProfile.objects.create(user=instance)
         
         # Create profile based on user type
         if instance.user_type == CustomUser.UserType.RIDER:

@@ -2,7 +2,7 @@
 Service for Stripe payment processing.
 """
 
-import stripe 
+import stripe
 from django.conf import settings
 from decimal import Decimal
 
