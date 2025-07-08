@@ -13,7 +13,7 @@ from apps.reviews.serializers import (
     ReviewStatsSerializer, ReviewResponseSerializer, ReviewHelpfulnessVoteSerializer
 ) 
 from apps.reviews.services.review_service import ReviewService
-from apps.users.models import User
+from apps.users.models import CustomUser as  User
 
 
 class ReviewViewSet(viewsets.ModelViewSet):

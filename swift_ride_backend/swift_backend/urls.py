@@ -27,18 +27,18 @@ schema_view = get_schema_view(
 # API URL patterns
 api_v1_patterns = [
     path('auth/', include('apps.authentication.urls')),
-    # path('users/', include('apps.users.urls')),
-    # path('rides/', include('apps.rides.urls')),
-    # path('vehicles/', include('apps.vehicles.urls')),
-    # path('chat/', include('apps.chat.urls')),
-    # path('payments/', include('apps.payments.urls')),
-    # path('reviews/', include('apps.reviews.urls')),
-    # path('emergency/', include('apps.emergency.urls')),
-    # path('notifications/', include('apps.notifications.urls')),
-    # path('analytics/', include('apps.analytics.urls')),
-    # path('locations/', include('apps.locations.urls')),
-    # path('promotions/', include('apps.promotions.urls')),
-    # path('ai-features/', include('apps.ai_features.urls')),
+    path('users/', include('apps.users.urls')),
+    path('rides/', include('apps.rides.urls')),
+    path('vehicles/', include('apps.vehicles.urls')),
+    path('chat/', include('apps.chat.urls')),
+    path('payments/', include('apps.payments.urls')),
+    path('reviews/', include('apps.reviews.urls')),
+    path('emergency/', include('apps.emergency.urls')), 
+    path('notifications/', include('apps.notifications.urls')),
+    path('analytics/', include('apps.analytics.urls')),
+    path('locations/', include('apps.location.urls')), 
+    path('promotions/', include('apps.promotions.urls')),
+    path('ai-features/', include('apps.ai_features.urls')),
 ]
  
 urlpatterns = [

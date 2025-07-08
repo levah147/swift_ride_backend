@@ -1,117 +1,118 @@
-INFO 2025-06-08 14:29:58,243 autoreload 16216 3532 Watching for file changes with StatReloader
-INFO 2025-06-09 00:54:25,997 autoreload 10680 8404 Watching for file changes with StatReloader
-INFO 2025-06-09 00:54:33,728 basehttp 10680 17196 "GET /admin/rides/ HTTP/1.1" 200 56491
-INFO 2025-06-09 00:54:33,875 basehttp 10680 17196 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 29444
-INFO 2025-06-09 00:54:34,214 basehttp 10680 17196 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
-INFO 2025-06-09 00:54:34,743 basehttp 10680 9876 "GET /admin/rides/ HTTP/1.1" 200 56490
-INFO 2025-06-09 00:54:36,809 basehttp 10680 17196 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:36,848 basehttp 10680 17196 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,856 basehttp 10680 20460 "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,865 basehttp 10680 17196 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,873 basehttp 10680 17196 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,877 basehttp 10680 3596 "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,879 basehttp 10680 3360 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,888 basehttp 10680 17196 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,904 basehttp 10680 15476 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,943 basehttp 10680 3596 "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:36,979 basehttp 10680 3596 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:37,287 basehttp 10680 9876 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:44,171 basehttp 10680 14596 "GET /admin/analytics/analyticssettings/ HTTP/1.1" 200 51271
-INFO 2025-06-09 00:54:44,220 basehttp 10680 14596 "GET /static/vendor/select2/css/select2.min.css HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,259 basehttp 10680 15196 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,259 basehttp 10680 19548 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,261 basehttp 10680 15596 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,263 basehttp 10680 19548 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,276 basehttp 10680 17660 "GET /static/admin/js/core.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,278 basehttp 10680 14596 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,287 basehttp 10680 12272 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,303 basehttp 10680 12272 "GET /static/jazzmin/js/change_list.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,306 basehttp 10680 14596 "GET /static/vendor/select2/js/select2.min.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:44,599 basehttp 10680 1988 "GET /admin/analytics/analyticssettings/ HTTP/1.1" 200 51271
-INFO 2025-06-09 00:54:45,744 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:46,137 basehttp 10680 1988 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:48,237 basehttp 10680 14596 "GET /admin/analytics/analyticsevent/ HTTP/1.1" 200 56689
-INFO 2025-06-09 00:54:48,544 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:54:48,832 basehttp 10680 18132 "GET /admin/analytics/analyticsevent/ HTTP/1.1" 200 56689
-INFO 2025-06-09 00:54:49,562 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:49,936 basehttp 10680 18132 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:51,890 basehttp 10680 14596 "GET /admin/analytics/analyticsreport/ HTTP/1.1" 200 55525
-INFO 2025-06-09 00:54:52,170 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:54:52,480 basehttp 10680 18132 "GET /admin/analytics/analyticsreport/ HTTP/1.1" 200 55525
-INFO 2025-06-09 00:54:53,255 basehttp 10680 14596 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:53,676 basehttp 10680 18132 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:54:56,855 basehttp 10680 14596 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
-INFO 2025-06-09 00:54:56,912 basehttp 10680 12784 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,925 basehttp 10680 12784 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,929 basehttp 10680 620 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,944 basehttp 10680 9508 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,944 basehttp 10680 620 "GET /static/jazzmin/js/change_form.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,958 basehttp 10680 9508 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,975 basehttp 10680 9508 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:56,983 basehttp 10680 9508 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
-INFO 2025-06-09 00:54:57,091 basehttp 10680 14596 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:54:57,725 basehttp 10680 18132 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
-INFO 2025-06-09 00:55:04,946 basehttp 10680 13752 "GET /admin/users/customuser/4b2cd4bf-703c-40f2-bd56-83e6b60f38eb/change/?_to_field=id HTTP/1.1" 200 90485
-INFO 2025-06-09 00:55:05,014 basehttp 10680 20684 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:55:05,019 basehttp 10680 2136 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
-INFO 2025-06-09 00:55:05,112 basehttp 10680 13752 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:55:05,511 basehttp 10680 16808 "GET /admin/users/customuser/4b2cd4bf-703c-40f2-bd56-83e6b60f38eb/change/?_to_field=id HTTP/1.1" 200 90485
-INFO 2025-06-09 00:55:12,391 basehttp 10680 10640 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
-INFO 2025-06-09 00:55:12,795 basehttp 10680 20804 "GET /admin/analytics/useranalytics/add/ HTTP/1.1" 200 83587
-INFO 2025-06-09 00:55:15,736 basehttp 10680 10640 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:16,121 basehttp 10680 20804 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:22,154 basehttp 10680 12616 "GET /admin/analytics/geographicanalytics/ HTTP/1.1" 200 52974
-INFO 2025-06-09 00:55:22,309 basehttp 10680 12616 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:55:22,612 basehttp 10680 18288 "GET /admin/analytics/geographicanalytics/ HTTP/1.1" 200 52974
-INFO 2025-06-09 00:55:23,353 basehttp 10680 12616 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:23,721 basehttp 10680 18288 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:26,006 basehttp 10680 12616 "GET /admin/analytics/paymentanalytics/ HTTP/1.1" 200 52659
-INFO 2025-06-09 00:55:26,158 basehttp 10680 12616 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:55:26,492 basehttp 10680 18288 "GET /admin/analytics/paymentanalytics/ HTTP/1.1" 200 52659
-INFO 2025-06-09 00:55:27,389 basehttp 10680 12616 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:27,783 basehttp 10680 18288 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:32,775 basehttp 10680 21112 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
-INFO 2025-06-09 00:55:32,933 basehttp 10680 21112 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:55:33,261 basehttp 10680 17696 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
-INFO 2025-06-09 00:55:34,974 basehttp 10680 21112 "GET /admin/analytics/driverperformanceanalytics/add/ HTTP/1.1" 200 83246
-INFO 2025-06-09 00:55:35,121 basehttp 10680 21112 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 00:55:35,453 basehttp 10680 17696 "GET /admin/analytics/driverperformanceanalytics/add/ HTTP/1.1" 200 83246
-INFO 2025-06-09 00:55:39,685 basehttp 10680 12296 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
-INFO 2025-06-09 00:55:40,045 basehttp 10680 1908 "GET /admin/analytics/driverperformanceanalytics/ HTTP/1.1" 200 52744
-INFO 2025-06-09 00:55:41,916 basehttp 10680 12296 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:42,275 basehttp 10680 1908 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:47,428 basehttp 10680 12296 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 00:55:47,805 basehttp 10680 1908 "GET /admin/ HTTP/1.1" 200 116251
-INFO 2025-06-09 01:37:44,256 autoreload 10680 8404 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
-INFO 2025-06-09 01:37:52,715 autoreload 7568 4068 Watching for file changes with StatReloader
-INFO 2025-06-09 01:38:36,496 autoreload 7568 4068 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
-INFO 2025-06-09 01:38:39,816 autoreload 17444 17400 Watching for file changes with StatReloader
-INFO 2025-06-09 01:40:21,133 autoreload 17444 17400 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
-INFO 2025-06-09 01:40:22,812 autoreload 17836 13732 Watching for file changes with StatReloader
-INFO 2025-06-09 01:40:58,580 autoreload 17836 13732 D:\CODE_NOW\swift_ride_backend\apps\users\models.py changed, reloading.
-INFO 2025-06-09 01:41:00,295 autoreload 3196 21304 Watching for file changes with StatReloader
-INFO 2025-06-09 01:41:42,653 autoreload 3196 21304 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
-INFO 2025-06-09 01:41:45,276 autoreload 2196 16444 Watching for file changes with StatReloader
-INFO 2025-06-09 01:41:56,841 autoreload 2196 16444 D:\CODE_NOW\swift_ride_backend\swift_backend\settings\base.py changed, reloading.
-INFO 2025-06-09 01:41:58,236 autoreload 19940 15024 Watching for file changes with StatReloader
-INFO 2025-06-09 01:42:23,386 autoreload 19940 15024 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:42:24,692 autoreload 7732 8208 Watching for file changes with StatReloader
-INFO 2025-06-09 01:43:21,989 autoreload 7732 8208 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:43:23,270 autoreload 8076 2748 Watching for file changes with StatReloader
-INFO 2025-06-09 01:43:30,520 autoreload 8076 2748 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:43:31,818 autoreload 16612 9792 Watching for file changes with StatReloader
-INFO 2025-06-09 01:43:40,085 autoreload 16612 9792 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:43:41,371 autoreload 19316 12700 Watching for file changes with StatReloader
-INFO 2025-06-09 01:43:45,464 autoreload 19316 12700 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:43:46,784 autoreload 19936 20452 Watching for file changes with StatReloader
-INFO 2025-06-09 01:44:04,854 autoreload 16160 16004 Watching for file changes with StatReloader
-INFO 2025-06-09 01:47:13,312 autoreload 16160 16004 D:\CODE_NOW\swift_ride_backend\apps\reviews\models.py changed, reloading.
-INFO 2025-06-09 01:47:21,152 autoreload 11448 19784 Watching for file changes with StatReloader
-INFO 2025-06-09 01:48:12,406 autoreload 21304 16808 Watching for file changes with StatReloader
-INFO 2025-06-09 01:48:17,696 basehttp 21304 17096 "GET /admin/ HTTP/1.1" 200 128271
-INFO 2025-06-09 01:48:18,507 basehttp 21304 4772 "GET /admin/ HTTP/1.1" 200 128270
-INFO 2025-06-09 01:48:26,254 basehttp 21304 17096 "GET /admin/reviews/review/ HTTP/1.1" 200 59496
-INFO 2025-06-09 01:48:26,478 basehttp 21304 17096 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
-INFO 2025-06-09 01:48:26,859 basehttp 21304 4772 "GET /admin/reviews/review/ HTTP/1.1" 200 59496
-INFO 2025-06-09 01:48:28,299 basehttp 21304 17096 "GET /admin/ HTTP/1.1" 200 128270
-INFO 2025-06-09 01:48:28,654 basehttp 21304 4772 "GET /admin/ HTTP/1.1" 200 128270
+INFO 2025-07-07 11:19:56,971 autoreload 20952 19344 D:\CODE_NOW\swift_ride_backend\apps\users\serializers.py changed, reloading.
+INFO 2025-07-07 11:20:16,052 autoreload 23660 15428 Watching for file changes with StatReloader
+INFO 2025-07-07 11:21:06,990 autoreload 10252 21848 Watching for file changes with StatReloader
+INFO 2025-07-07 11:21:54,335 autoreload 10252 21848 D:\CODE_NOW\swift_ride_backend\apps\analytics\services\reporting_service.py changed, reloading.
+INFO 2025-07-07 11:21:56,382 autoreload 19372 9808 Watching for file changes with StatReloader
+INFO 2025-07-07 11:22:38,036 autoreload 19372 9808 D:\CODE_NOW\swift_ride_backend\apps\analytics\services\reporting_service.py changed, reloading.
+INFO 2025-07-07 11:22:39,653 autoreload 8356 22260 Watching for file changes with StatReloader
+WARNING 2025-07-07 11:22:59,543 log 8356 5820 Not Found: /
+WARNING 2025-07-07 11:22:59,544 basehttp 8356 5820 "GET / HTTP/1.1" 404 15810
+INFO 2025-07-07 11:22:59,663 basehttp 8356 5820 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-07-07 11:22:59,687 basehttp 8356 23852 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-07-07 11:22:59,691 basehttp 8356 5820 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:00,268 basehttp 8356 5820 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-07-07 11:23:13,929 log 8356 7436 Not Found: /admin/home/
+WARNING 2025-07-07 11:23:13,956 basehttp 8356 7436 "GET /admin/home/ HTTP/1.1" 404 32935
+INFO 2025-07-07 11:23:18,429 basehttp 8356 7436 "GET /admin/ HTTP/1.1" 200 175698
+INFO 2025-07-07 11:23:18,480 basehttp 8356 7436 "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,482 basehttp 8356 3680 "GET /static/vendor/adminlte/css/adminlte.min.css HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,507 basehttp 8356 3680 "GET /static/vendor/adminlte/img/AdminLTELogo.png HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,507 basehttp 8356 7436 "GET /static/vendor/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,513 basehttp 8356 12468 "GET /static/jazzmin/css/main.css HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,520 basehttp 8356 3680 "GET /static/vendor/adminlte/js/adminlte.min.js HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,521 basehttp 8356 7436 "GET /static/jazzmin/js/main.js HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,565 basehttp 8356 19860 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2025-07-07 11:23:18,777 basehttp 8356 19860 "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:18,777 basehttp 8356 7436 "GET /static/vendor/fontawesome-free/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-07-07 11:23:54,241 basehttp 8356 3472 "GET /admin/ HTTP/1.1" 200 175699
+INFO 2025-07-07 11:27:28,676 autoreload 8356 22260 D:\CODE_NOW\swift_ride_backend\swift_backend\urls.py changed, reloading.
+INFO 2025-07-07 11:27:35,299 autoreload 8888 7584 Watching for file changes with StatReloader
+INFO 2025-07-07 11:27:49,664 autoreload 8888 7584 D:\CODE_NOW\swift_ride_backend\swift_backend\urls.py changed, reloading.
+INFO 2025-07-07 11:27:52,746 autoreload 10664 2556 Watching for file changes with StatReloader
+INFO 2025-07-07 11:28:01,127 autoreload 10664 2556 D:\CODE_NOW\swift_ride_backend\swift_backend\urls.py changed, reloading.
+INFO 2025-07-07 11:28:04,006 autoreload 18640 23896 Watching for file changes with StatReloader
+INFO 2025-07-07 11:29:04,521 autoreload 18640 23896 D:\CODE_NOW\swift_ride_backend\apps\emergency\services\location_service.py changed, reloading.
+INFO 2025-07-07 11:29:07,457 autoreload 21160 23352 Watching for file changes with StatReloader
+INFO 2025-07-07 11:33:57,131 autoreload 21160 23352 D:\CODE_NOW\swift_ride_backend\apps\users\serializers.py changed, reloading.
+INFO 2025-07-07 11:34:00,327 autoreload 9020 18184 Watching for file changes with StatReloader
+INFO 2025-07-07 11:34:11,772 autoreload 9020 18184 D:\CODE_NOW\swift_ride_backend\apps\users\serializers.py changed, reloading.
+INFO 2025-07-07 11:34:13,689 autoreload 14496 20252 Watching for file changes with StatReloader
+INFO 2025-07-07 11:34:46,216 autoreload 14496 20252 D:\CODE_NOW\swift_ride_backend\apps\users\serializers.py changed, reloading.
+INFO 2025-07-07 11:34:48,440 autoreload 11720 12496 Watching for file changes with StatReloader
+INFO 2025-07-07 11:37:04,025 autoreload 11720 12496 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:37:06,075 autoreload 16744 10188 Watching for file changes with StatReloader
+INFO 2025-07-07 11:37:27,218 autoreload 16744 10188 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:37:29,057 autoreload 24172 15684 Watching for file changes with StatReloader
+INFO 2025-07-07 11:37:56,088 autoreload 24172 15684 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:37:57,818 autoreload 2424 8712 Watching for file changes with StatReloader
+INFO 2025-07-07 11:38:08,585 autoreload 2424 8712 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:38:10,190 autoreload 9808 20640 Watching for file changes with StatReloader
+INFO 2025-07-07 11:38:19,175 autoreload 9808 20640 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:38:20,737 autoreload 10944 9192 Watching for file changes with StatReloader
+INFO 2025-07-07 11:38:25,389 autoreload 10944 9192 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:38:26,961 autoreload 12964 1856 Watching for file changes with StatReloader
+INFO 2025-07-07 11:38:49,083 autoreload 12964 1856 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:38:50,653 autoreload 18652 13844 Watching for file changes with StatReloader
+INFO 2025-07-07 11:38:53,214 autoreload 18652 13844 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:38:55,126 autoreload 24536 22980 Watching for file changes with StatReloader
+INFO 2025-07-07 11:39:01,682 autoreload 24536 22980 D:\CODE_NOW\swift_ride_backend\apps\ai_features\services\prediction_service.py changed, reloading.
+INFO 2025-07-07 11:39:03,224 autoreload 24996 22928 Watching for file changes with StatReloader
+INFO 2025-07-07 11:47:15,122 autoreload 24996 22928 D:\CODE_NOW\swift_ride_backend\swift_backend\urls.py changed, reloading.
+INFO 2025-07-07 11:47:16,606 autoreload 11480 17332 Watching for file changes with StatReloader
+INFO 2025-07-07 12:07:27,725 autoreload 11480 17332 D:\CODE_NOW\swift_ride_backend\apps\users\urls.py changed, reloading.
+INFO 2025-07-07 12:07:35,104 autoreload 3960 19132 Watching for file changes with StatReloader
+INFO 2025-07-07 12:11:02,298 autoreload 3960 19132 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:11:05,760 autoreload 5504 22120 Watching for file changes with StatReloader
+INFO 2025-07-07 12:11:59,536 autoreload 5504 22120 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:12:03,311 autoreload 25240 6064 Watching for file changes with StatReloader
+INFO 2025-07-07 12:14:16,544 autoreload 25240 6064 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:14:20,806 autoreload 21208 22120 Watching for file changes with StatReloader
+INFO 2025-07-07 12:17:23,850 autoreload 3668 23432 Watching for file changes with StatReloader
+INFO 2025-07-07 12:19:00,803 autoreload 3668 23432 D:\CODE_NOW\swift_ride_backend\apps\users\utils.py changed, reloading.
+INFO 2025-07-07 12:19:03,136 autoreload 16068 19228 Watching for file changes with StatReloader
+INFO 2025-07-07 12:23:45,761 autoreload 16068 19228 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:23:50,373 autoreload 21148 21012 Watching for file changes with StatReloader
+INFO 2025-07-07 12:24:15,390 autoreload 21148 21012 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:24:19,151 autoreload 22996 24408 Watching for file changes with StatReloader
+INFO 2025-07-07 12:24:29,899 autoreload 22996 24408 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:24:32,878 autoreload 14548 14456 Watching for file changes with StatReloader
+INFO 2025-07-07 12:25:26,295 autoreload 14548 14456 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:25:28,091 autoreload 14100 25020 Watching for file changes with StatReloader
+INFO 2025-07-07 12:26:13,153 autoreload 14100 25020 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:26:15,655 autoreload 2284 21748 Watching for file changes with StatReloader
+INFO 2025-07-07 12:26:20,224 autoreload 2284 21748 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:26:22,102 autoreload 1736 16744 Watching for file changes with StatReloader
+INFO 2025-07-07 12:26:27,783 autoreload 1736 16744 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:26:29,614 autoreload 4852 13624 Watching for file changes with StatReloader
+INFO 2025-07-07 12:26:38,031 autoreload 4852 13624 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:26:39,815 autoreload 11424 5072 Watching for file changes with StatReloader
+INFO 2025-07-07 12:29:32,238 autoreload 11424 5072 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:29:34,808 autoreload 6020 24732 Watching for file changes with StatReloader
+INFO 2025-07-07 12:29:37,295 autoreload 6020 24732 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:29:39,124 autoreload 8928 16900 Watching for file changes with StatReloader
+INFO 2025-07-07 12:29:49,444 autoreload 8928 16900 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:29:51,305 autoreload 1788 12392 Watching for file changes with StatReloader
+INFO 2025-07-07 12:29:54,588 autoreload 1788 12392 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 12:29:56,984 autoreload 14848 2468 Watching for file changes with StatReloader
+INFO 2025-07-07 12:33:47,812 autoreload 11332 23620 Watching for file changes with StatReloader
+INFO 2025-07-07 13:01:51,481 autoreload 11332 23620 D:\CODE_NOW\swift_ride_backend\apps\users\utils.py changed, reloading.
+INFO 2025-07-07 13:01:56,094 autoreload 15600 17572 Watching for file changes with StatReloader
+INFO 2025-07-07 13:03:16,976 autoreload 15600 17572 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 13:03:20,918 autoreload 5884 22332 Watching for file changes with StatReloader
+INFO 2025-07-07 13:04:32,525 autoreload 5884 22332 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 13:04:35,307 autoreload 11708 15640 Watching for file changes with StatReloader
+INFO 2025-07-07 13:04:54,273 autoreload 11708 15640 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 13:04:57,119 autoreload 2284 22456 Watching for file changes with StatReloader
+INFO 2025-07-07 13:05:13,838 autoreload 2284 22456 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 13:05:16,266 autoreload 16784 21936 Watching for file changes with StatReloader
+INFO 2025-07-07 13:07:26,181 autoreload 16784 21936 D:\CODE_NOW\swift_ride_backend\apps\users\views.py changed, reloading.
+INFO 2025-07-07 13:07:28,514 autoreload 2016 5576 Watching for file changes with StatReloader
+INFO 2025-07-07 13:07:38,010 autoreload 2016 5576 D:\CODE_NOW\swift_ride_backend\apps\users\permissions.py changed, reloading.
+INFO 2025-07-07 13:07:39,877 autoreload 22436 9816 Watching for file changes with StatReloader
+INFO 2025-07-07 13:10:01,044 autoreload 22436 9816 D:\CODE_NOW\swift_ride_backend\apps\users\utils.py changed, reloading.
+INFO 2025-07-07 13:10:02,986 autoreload 14876 20488 Watching for file changes with StatReloader
+INFO 2025-07-07 13:11:33,036 autoreload 14876 20488 D:\CODE_NOW\swift_ride_backend\apps\users\permissions.py changed, reloading.
+INFO 2025-07-07 13:11:35,611 autoreload 19668 14776 Watching for file changes with StatReloader
+INFO 2025-07-07 13:34:41,942 autoreload 19668 14776 D:\CODE_NOW\swift_ride_backend\apps\common\apps.py changed, reloading.
+INFO 2025-07-07 13:34:49,580 autoreload 5328 19572 Watching for file changes with StatReloader
+INFO 2025-07-08 11:11:37,805 autoreload 21836 2888 Watching for file changes with StatReloader

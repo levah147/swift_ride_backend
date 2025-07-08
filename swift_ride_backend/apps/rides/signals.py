@@ -7,8 +7,8 @@ from django.dispatch import receiver
 
 from apps.rides.models import Ride, RideHistory, BargainOffer
 from apps.notifications.services.notification_service import NotificationService
- 
- 
+
+
 @receiver(post_save, sender=Ride)
 def ride_status_changed(sender, instance, created, **kwargs):
     """

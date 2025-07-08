@@ -187,4 +187,180 @@ class UserPreferences(BaseModel):
     
     def __str__(self):
         return f"Preferences: {self.user}"
- 
+
+
+
+
+
+
+class UserProfile(BaseModel):
+    """
+    General user profile model that contains common information for all users.
+    This serves as a base profile while RiderProfile and DriverProfile contain
+    role-specific information.
+    """
+    user = models.OneToOneField(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='profile'
+    )
+    profile_picture = models.ImageField(
+        upload_to='profiles/users/',
+        null=True,
+        blank=True,
+        help_text=_('User profile picture')
+    )
+    bio = models.TextField(
+        max_length=500,
+        blank=True,
+        null=True,
+        help_text=_('Short bio about the user')
+    )
+    date_of_birth = models.DateField(
+        blank=True,
+        null=True,
+        help_text=_('User date of birth')
+    )
+    gender = models.CharField(
+        max_length=20,
+        choices=[
+            ('male', _('Male')),
+            ('female', _('Female')),
+            ('other', _('Other')),
+            ('prefer_not_to_say', _('Prefer not to say'))
+        ],
+        blank=True,
+        null=True
+    )
+    address = models.CharField(
+        max_length=255,
+        blank=True,
+        null=True,
+        help_text=_('Primary address')
+    )
+    city = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True
+    )
+    state = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True
+    )
+    country = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True,
+        default='Nigeria'
+    )
+    postal_code = models.CharField(
+        max_length=20,
+        blank=True,
+        null=True
+    )
+    emergency_contact_name = models.CharField(
+        max_length=100,
+        blank=True,
+        null=True,
+        help_text=_('Emergency contact person name')
+    )
+    emergency_contact_number = PhoneNumberField(
+        blank=True,
+        null=True,
+        help_text=_('Emergency contact phone number')
+    )
+    is_profile_complete = models.BooleanField(
+        default=False,
+        help_text=_('Indicates if user has completed their profile setup')
+    )
+    
+    class Meta:
+        verbose_name = _('User Profile')
+        verbose_name_plural = _('User Profiles')
+    
+    def __str__(self):
+        return f"Profile: {self.user.get_full_name() or self.user.phone_number}"
+    
+    def get_full_address(self):
+        """
+        Return the complete address as a single string.
+        """
+        address_parts = [
+            self.address,
+            self.city,
+            self.state,
+            self.country,
+            self.postal_code
+        ]
+        return ', '.join(filter(None, address_parts))
+    
+    def calculate_age(self):
+        """
+        Calculate and return user's age based on date of birth.
+        """
+        if self.date_of_birth:
+            from datetime import date
+            today = date.today()
+            return today.year - self.date_of_birth.year - (
+                (today.month, today.day) < (self.date_of_birth.month, self.date_of_birth.day)
+            )
+        return None
+    
+    def check_profile_completeness(self):
+        """
+        Check if the profile is complete and update the is_profile_complete field.
+        """
+        required_fields = [
+            self.user.first_name,
+            self.user.last_name,
+            self.address,
+            self.city,
+            self.emergency_contact_name,
+            self.emergency_contact_number
+        ]
+        
+        is_complete = all(field for field in required_fields)
+        
+        if self.is_profile_complete != is_complete:
+            self.is_profile_complete = is_complete
+            self.save(update_fields=['is_profile_complete'])
+        
+        return is_complete
+    
+    def save(self, *args, **kwargs):
+        """
+        Override save to automatically check profile completeness.
+        """
+        super().save(*args, **kwargs)
+        if not kwargs.get('update_fields'):
+            self.check_profile_completeness() 
+
+
+
+class UserDocument(BaseModel):
+    """
+    User documents model.
+    """
+    class DocumentType(models.TextChoices):
+        ID_CARD = 'id_card', _('ID Card')
+        PASSPORT = 'passport', _('Passport')
+        OTHER = 'other', _('Other')
+    
+    user = models.ForeignKey(
+        CustomUser,
+        on_delete=models.CASCADE,
+        related_name='documents'
+    )
+    document_type = models.CharField(
+        max_length=20,
+        choices=DocumentType.choices
+    )
+    document_image = models.ImageField(
+        upload_to='documents/user_docs/',
+        null=True,
+        blank=True
+    )
+    
+    def __str__(self):
+        return f"{self.user} - {self.document_type}" 

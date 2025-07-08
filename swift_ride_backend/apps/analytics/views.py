@@ -1,3 +1,4 @@
+from amqp import NotFound
 from rest_framework import generics, status, permissions
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -22,6 +23,8 @@ from apps.analytics.services.reporting_service import ReportingService, MetricsS
 from core.utils.exceptions import ValidationError
 import logging
 from datetime import datetime, timedelta
+from rest_framework.exceptions import NotFound, PermissionDenied
+
 
 logger = logging.getLogger(__name__)
 

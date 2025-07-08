@@ -43,6 +43,9 @@ THIRD_PARTY_APPS = [
     'drf_yasg',
     'phonenumber_field',
     'django_redis',
+    # 'rest_framework_gis',
+    # 'django.contrib.gis',  
+
 ]
 
 LOCAL_APPS = [
@@ -57,13 +60,30 @@ LOCAL_APPS = [
     'apps.emergency',
     'apps.notifications', 
     'apps.analytics',
-    # 'apps.locations',
-    # 'apps.promotions',
-    # 'apps.ai_features',
+    'apps.location',   
+    'apps.promotions',
+    'apps.ai_features', 
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+
+# GDAL_LIBRARY_PATH = os.getenv('GDAL_LIBRARY_PATH', 'C:/OSGeo4W/bin/gdal308.dll') 
+# GDAL_LIBRARY_PATH = "C:/OSGeo4W/bin/gdal310.dll"  # adjust to the actual DLL name
+
+
+# In your settings.py
+import os
+if os.name == 'nt':  # Windows
+    GDAL_LIBRARY_PATH = r'C:\OSGeo4W\bin\gdal310.dll' 
+    GEOS_LIBRARY_PATH = r'C:\OSGeo4W\bin\geos_c.dll'
+
+# GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+# GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+ 
+# PROJ_LIB = os.environ.get('PROJ_LIB') 
+# GDAL_DATA =os.environ.get('GDAL_DATA')
+     
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -101,7 +121,7 @@ ASGI_APPLICATION = 'swift_backend.asgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': env('DB_NAME', default='swift_ride'),
         'USER': env('DB_USER', default='postgres'),
         'PASSWORD': env('DB_PASSWORD', default='postgres'),

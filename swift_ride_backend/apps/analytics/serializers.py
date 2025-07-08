@@ -4,8 +4,8 @@ from apps.analytics.models import (
     RideAnalytics, GeographicAnalytics, DriverPerformanceAnalytics,
     PaymentAnalytics, RevenueAnalytics, AnalyticsReport, AnalyticsSettings
 )
-from apps.users.serializers import UserBasicSerializer
-
+from apps.users.serializers import UserBasicSerializer   
+ 
 
 class AnalyticsEventSerializer(serializers.ModelSerializer):
     """Serializer for analytics events"""

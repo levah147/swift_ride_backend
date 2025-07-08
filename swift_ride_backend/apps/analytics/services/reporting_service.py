@@ -1,12 +1,12 @@
 from django.utils import timezone
 from django.db.models import Count, Sum, Avg, Q, F
 from apps.analytics.models import (
-    DailyAnalytics, UserAnalytics, RideAnalytics, 
+    AnalyticsEvent, DailyAnalytics, UserAnalytics, RideAnalytics, 
     DriverPerformanceAnalytics, PaymentAnalytics, RevenueAnalytics
 )
 from apps.rides.models import Ride
 from apps.payments.models import Payment
-from apps.users.models import User
+from apps.users.models import CustomUser as User
 from decimal import Decimal
 import logging
 from datetime import datetime, timedelta, date
@@ -253,50 +253,47 @@ class ReportingService:
             logger.error(f"Error generating financial report: {str(e)}")
             return None
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @staticmethod
     def generate_user_engagement_report(start_date=None, end_date=None):
-        """Generate user engagement report"""
         if not start_date:
             start_date = timezone.now().date() - timedelta(days=30)
         if not end_date:
             end_date = timezone.now().date()
-        
+
         try:
-            # Get daily analytics
             daily_analytics = DailyAnalytics.objects.filter(
                 date__range=[start_date, end_date]
             )
-            
-            # Calculate engagement metrics
+
             engagement_totals = daily_analytics.aggregate(
                 total_app_opens=Sum('app_opens'),
                 total_chat_messages=Sum('chat_messages'),
                 total_ratings=Sum('ratings_given'),
                 avg_rating=Avg('avg_rating')
             )
-            
-            # Get user analytics for active users
+
             active_users = UserAnalytics.objects.filter(
                 last_active__date__range=[start_date, end_date]
             )
-            
-            # Calculate retention metrics
+
             total_users = active_users.count()
-            returning_users = active_users.filter(
-                user__date_joined__date__lt=start_date
-            ).count()
-            
-            retention_rate = 0
-            if total_users > 0:
-                retention_rate = (returning_users / total_users) * 100
-            
-            # Get most engaged users
+            returning_users = active_users.filter(user__date_joined__date__lt=start_date).count()
+
+            retention_rate = (returning_users / total_users) * 100 if total_users > 0 else 0
+
             most_engaged = active_users.order_by('-total_sessions')[:10]
-            
+
             engaged_users_data = []
             for user_analytics in most_engaged:
-                engaged_users_data.append({
-                    'user_id': str(user_analytics.user.id), 
                 engaged_users_data.append({
                     'user_id': str(user_analytics.user.id),
                     'name': user_analytics.user.get_full_name(),
@@ -305,7 +302,7 @@ class ReportingService:
                     'avg_session_duration': str(user_analytics.avg_session_duration),
                     'last_active': user_analytics.last_active.isoformat() if user_analytics.last_active else None
                 })
-            
+
             return {
                 'period': {
                     'start_date': start_date.isoformat(),
@@ -321,9 +318,9 @@ class ReportingService:
                 'most_engaged_users': engaged_users_data,
                 'generated_at': timezone.now().isoformat()
             }
-            
+
         except Exception as e:
-            logger.error(f"Error generating user engagement report: {str(e)}")
+            logger.error(f"Error generating user engagement report: {str(e)}", exc_info=True)
             return None
     
     @staticmethod

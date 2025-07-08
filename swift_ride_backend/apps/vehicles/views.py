@@ -5,6 +5,7 @@ Views for the vehicles app.
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework import serializers  # This was missing
 from rest_framework.permissions import IsAuthenticated
 from django.db.models import Q
 
@@ -56,16 +57,16 @@ class VehicleViewSet(viewsets.ModelViewSet):
     
     def perform_create(self, serializer):
         """Create vehicle for the current user."""
-        # Check if user is a driver
         if not self.request.user.is_driver:
             raise serializers.ValidationError("Only drivers can register vehicles")
-        
+
         vehicle = VehicleService.register_vehicle(
             self.request.user,
             serializer.validated_data
         )
-        return vehicle
-    
+        serializer.instance = vehicle  # 💡 Important
+
+        
     @action(detail=True, methods=['post'])
     def verify(self, request, pk=None):
         """Verify a vehicle (admin only)."""

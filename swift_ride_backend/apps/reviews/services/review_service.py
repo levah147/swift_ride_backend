@@ -8,7 +8,7 @@ from apps.reviews.models import (
     Review, ReviewCategory, ReviewRating, ReviewHelpfulness,
     ReviewReport, ReviewAnalytics, ReviewIncentive, ReviewIncentiveUsage
 )
-from apps.users.models import User
+from apps.users.models import CustomUser as User
 from apps.rides.models import Ride
 from core.utils.exceptions import ValidationError
 

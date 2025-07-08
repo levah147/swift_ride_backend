@@ -1,20 +1,30 @@
-
-# ```python file="swift_ride_backend/apps/users/serializers.py"
 """
 Serializers for user models.
 """
 
-# from operator import lt
-# from turtle import lt
-from turtle import lt
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from django.utils import timezone
 from datetime import timedelta
 
-from apps.users.models import UserProfile, DriverProfile, RiderProfile, UserPreference, UserDocument
+from apps.users.models import UserProfile, DriverProfile, RiderProfile, UserPreferences, UserDocument
 
 User = get_user_model()
+
+
+class UserBasicSerializer(serializers.ModelSerializer):
+    """
+    Basic serializer for User model - used for simple user references.
+    """
+    full_name = serializers.CharField(read_only=True)
+    
+    class Meta:
+        model = User
+        fields = [
+            'id', 'phone_number', 'email', 'first_name', 'last_name', 'full_name',
+            'is_active', 'is_verified'
+        ]
+        read_only_fields = ['id', 'is_active', 'is_verified']
 
 
 class UserPreferenceSerializer(serializers.ModelSerializer):
@@ -22,7 +32,7 @@ class UserPreferenceSerializer(serializers.ModelSerializer):
     Serializer for UserPreference model.
     """
     class Meta:
-        model = UserPreference
+        model = UserPreferences
         fields = [
             'id', 'language', 'currency', 'dark_mode', 'accessibility_features',
             'email_notifications', 'push_notifications', 'sms_notifications',
@@ -57,7 +67,7 @@ class UserDocumentSerializer(serializers.ModelSerializer):
     def get_is_expired(self, obj):
         """Check if document is expired."""
         if obj.expiry_date:
-            return obj.expiry_date &lt; timezone.now().date()
+            return obj.expiry_date < timezone.now().date()
         return False
     
     def get_days_until_expiry(self, obj):
@@ -207,7 +217,7 @@ class UserPreferenceUpdateSerializer(serializers.ModelSerializer):
     Serializer for updating UserPreference model.
     """
     class Meta:
-        model = UserPreference
+        model = UserPreferences
         fields = [
             'language', 'currency', 'dark_mode', 'accessibility_features',
             'email_notifications', 'push_notifications', 'sms_notifications',
@@ -227,7 +237,7 @@ class UserDocumentCreateSerializer(serializers.ModelSerializer):
         
     def validate_expiry_date(self, value):
         """Validate expiry date is in the future."""
-        if value and value <= timezone.now().date():  # Fixed: HTML entities replaced with actual operators
+        if value and value <= timezone.now().date():
             raise serializers.ValidationError("Expiry date must be in the future")
         return value
     
@@ -281,21 +291,6 @@ class UserDocumentCreateSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         validated_data['user'] = user
         return super().create(validated_data)
-# class UserDocumentCreateSerializer(serializers.ModelSerializer):
-#     """
-#     Serializer for creating UserDocument model.
-#     """
-#     class Meta:
-#         model = UserDocument
-#         fields = [
-#             'document_type', 'document_number', 'document_file', 'expiry_date'
-#         ]
-        
-#     def validate_expiry_date(self, value):
-#         """Validate expiry date is in the future."""
-#         if value and value &lt<= timezone.now().date():
-#             raise serializers.ValidationError("Expiry date must be in the future")
-#         return value
 
 
 class UserRegistrationSerializer(serializers.Serializer):
@@ -386,4 +381,4 @@ class UserListSerializer(serializers.ModelSerializer):
         elif is_rider:
             return 'rider'
         else:
-            return 'unknown'
+            return 'unknown' 

@@ -2,7 +2,7 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import Distance
 from django.utils import timezone
 from apps.emergency.models import LocationShare, EmergencyAlert
-from apps.users.models import User
+from apps.users.models import CustomUser as User
 import requests
 import logging
 
